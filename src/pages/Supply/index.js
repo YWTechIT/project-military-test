@@ -31,8 +31,6 @@ const Supply = ({ score, setScore }) => {
     }
   };
 
-  console.log(score.supply.affairScore, score.supply.medicScore, score.supply.weaponScore, score.supply.policeScore, score.supply.prayScore, score.supply.bandScore);
-
   return (
     <Container>
       <Question QUIZZES={SUPPLY_QUIZ} currentNo={supplyCurrentNo}></Question>
