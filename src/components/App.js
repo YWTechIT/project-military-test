@@ -1,11 +1,16 @@
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
+import Category from "../pages/Category";
 import Combat from "../pages/Combat";
 import Supply from "../pages/Supply";
 import theme from "../theme";
 
 const App = () => {
   const defaultScore = {
+    category: {
+      combatScore: 0,
+      supplyScore: 0,
+    },
     combat: {
       shortScore: 0,
       longScore: 0,
@@ -25,8 +30,9 @@ const App = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Combat score={score} setScore={setScore}></Combat>
-        <Supply score={score} setScore={setScore}></Supply>
+        <Category setScore={setScore}></Category>
+        <Combat setScore={setScore}></Combat>
+        <Supply setScore={setScore}></Supply>
       </ThemeProvider>
     </>
   );
