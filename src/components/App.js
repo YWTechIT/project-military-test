@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
+import GlobalStyle from "../globalStyle";
 import Category from "../pages/Category";
 import Combat from "../pages/Combat";
 import Supply from "../pages/Supply";
@@ -30,6 +31,7 @@ const App = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <Category setScore={setScore}></Category>
         <Combat setScore={setScore}></Combat>
         <Supply setScore={setScore}></Supply>
