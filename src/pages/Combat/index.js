@@ -10,14 +10,22 @@ const Combat = ({ setScore }) => {
   const [currentNo, setCurrentNo] = useState(0);
 
   const combatScore = (answer) => {
-    const short = answer.short;
-    const long = answer.long;
+    const infantry = answer.infantry;
+    const artillery = answer.artillery;
+    const armor = answer.armor;
+    const engineer = answer.engineer;
+    const signal = answer.signal;
+    const intelligence = answer.intelligence;
 
     setScore((score) => ({
       ...score,
       combat: {
-        shortScore: score.combat.shortScore + short,
-        longScore: score.combat.longScore + long,
+        infantryScore: score.combat.infantryScore + infantry,
+        artilleryScore: score.combat.artilleryScore + artillery,
+        armorScore: score.combat.armorScore + armor,
+        engineerScore: score.combat.engineerScore + engineer,
+        signalScore: score.combat.signalScore + signal,
+        intelligenceScore: score.combat.intelligenceScore + intelligence,
       },
     }));
 

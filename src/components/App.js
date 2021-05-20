@@ -13,8 +13,12 @@ const App = () => {
       supplyScore: 0,
     },
     combat: {
-      shortScore: 0,
-      longScore: 0,
+      infantryScore: 0,
+      artilleryScore: 0,
+      armorScore: 0,
+      engineerScore: 0,
+      signalScore: 0,
+      intelligenceScore: 0,
     },
     supply: {
       affairScore: 0,
@@ -32,9 +36,9 @@ const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Category setScore={setScore}></Category>
-        <Combat setScore={setScore}></Combat>
-        <Supply setScore={setScore}></Supply>
+        <Category score = {score} setScore={setScore}></Category>
+        <Combat score = {score} setScore={setScore}></Combat>
+        <Supply score = {score} setScore={setScore}></Supply>
       </ThemeProvider>
     </>
   );
