@@ -1,20 +1,21 @@
 import React from "react";
 import Button from "../Button";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const AnswerGroupWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
 `;
 
-const AnswerGroup = ({QUIZZES, currentNo, handleClick}) => {
+const AnswerGroup = ({ QUIZZES, currentNo, handleClick }) => {
   return (
     <AnswerGroupWrapper>
       {QUIZZES[currentNo].answers.map((answer) => (
         <Button
+          key={answer.text}
           text={answer.text}
           onClick={() => handleClick(answer)}
         ></Button>
@@ -24,4 +25,3 @@ const AnswerGroup = ({QUIZZES, currentNo, handleClick}) => {
 };
 
 export default AnswerGroup;
-
