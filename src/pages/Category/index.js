@@ -9,9 +9,7 @@ const Category = ({ score, setScore }) => {
   let history = useHistory();
   const [currentNo, setCurrentNo] = useState(0);
 
-  const categoryHandleClick = (answer) => {
-    const combat = answer.combat;
-    const supply = answer.supply;
+  const categoryHandleClick = ({ combat, supply }) => {
     setScore((score) => ({
       ...score,
       category: {
@@ -25,7 +23,6 @@ const Category = ({ score, setScore }) => {
     } else {
       setCurrentNo((currentNo) => currentNo + 1);
     }
-    console.log(score.category.combatScore, score.category.supplyScore);
   };
 
   return (
