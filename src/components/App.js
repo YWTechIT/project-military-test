@@ -6,12 +6,13 @@ import Combat from "../pages/Combat";
 import Supply from "../pages/Supply";
 import theme from "../theme";
 import defaultScore from "./defaultScore";
-import getCode from "./getCode";
+import getMaxKey from "../utility/getMaxKey";
 
 const App = () => {
   const [score, setScore] = useState(defaultScore);
-  const getCombatCode = getCode(score.combat);
-  const getSupplyCode = getCode(score.supply);
+  const categoryKey = getMaxKey(score.category);
+  const combatKey = getMaxKey(score.combat);
+  const supplyKey = getMaxKey(score.supply);
 
   return (
     <>
