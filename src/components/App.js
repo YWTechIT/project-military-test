@@ -12,6 +12,10 @@ const App = () => {
   const [score, setScore] = useState(defaultScore);
   const getCombatCode = getCode(score.combat);
   const getSupplyCode = getCode(score.supply);
+  // console.log(score.category);
+  console.log(getCombatCode);
+  // console.log(getSupplyCode);
+  
 
   return (
     <>
