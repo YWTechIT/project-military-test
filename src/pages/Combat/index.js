@@ -3,37 +3,47 @@ import Question from "../../components/Question";
 import Container from "../../components/Container";
 import { useHistory } from "react-router-dom";
 import { COMBAT_QUIZ } from "./Constant";
-import CombatAnswer from "../../components/Answer/Combat";
+import AnswerGroup from "../../components/AnswerGroup";
 
-const Combat = ({ score, setScore }) => {
+const Combat = ({ setScore }) => {
   let history = useHistory();
-  const [combatCurrentNo, setCombatCurrentNo] = useState(0);
+  const [currentNo, setCurrentNo] = useState(0);
 
-  const combatHandleClick = (short, long) => {
-    if (combatHandleClick) {
-      setScore((score) => ({
-        ...score,
-        combat: {
-          shortScore: score.combat.shortScore + short,
-          longScore: score.combat.longScore + long,
-        },
-      }));
-    }
-    if (combatCurrentNo === COMBAT_QUIZ.length - 1) {
+  const combatScore = (answer) => {
+    const infantry = answer.infantry;
+    const artillery = answer.artillery;
+    const armor = answer.armor;
+    const engineer = answer.engineer;
+    const signal = answer.signal;
+    const intelligence = answer.intelligence;
+
+    setScore((score) => ({
+      ...score,
+      combat: {
+        infantryScore: score.combat.infantryScore + infantry,
+        artilleryScore: score.combat.artilleryScore + artillery,
+        armorScore: score.combat.armorScore + armor,
+        engineerScore: score.combat.engineerScore + engineer,
+        signalScore: score.combat.signalScore + signal,
+        intelligenceScore: score.combat.intelligenceScore + intelligence,
+      },
+    }));
+
+    if (currentNo === COMBAT_QUIZ.length - 1) {
       history.push("/loading");
     } else {
-      setCombatCurrentNo((combatCurrentNo) => combatCurrentNo + 1);
+      setCurrentNo((currentNo) => currentNo + 1);
     }
   };
 
   return (
     <Container>
-      <Question QUIZZES={COMBAT_QUIZ} currentNo={combatCurrentNo}></Question>
-      <CombatAnswer
+      <Question QUIZZES={COMBAT_QUIZ} currentNo={currentNo}></Question>
+      <AnswerGroup
         QUIZZES={COMBAT_QUIZ}
-        currentNo={combatCurrentNo}
-        handleClick={combatHandleClick}
-      ></CombatAnswer>
+        currentNo={currentNo}
+        handleClick={combatScore}
+      ></AnswerGroup>
     </Container>
   );
 };

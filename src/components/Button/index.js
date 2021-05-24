@@ -1,6 +1,7 @@
+import React from 'react';
 import styled from "styled-components";
 
-const ButtonStyle = styled.button`
+const StyledButton = styled.button`
   font-size: 18px;
   color: #ffffff;
   background-color: ${(props) => props.theme.primaryColor100};
@@ -18,4 +19,8 @@ const ButtonStyle = styled.button`
   }
 `;
 
-export default ButtonStyle;
+const Button = (props) => {
+  return <StyledButton onClick={props.onClick}>{props.text}</StyledButton>
+}
+
+export default Button;
