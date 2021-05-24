@@ -9,14 +9,7 @@ const Combat = ({ setScore }) => {
   let history = useHistory();
   const [currentNo, setCurrentNo] = useState(0);
 
-  const combatScore = (answer) => {
-    const infantry = answer.infantry;
-    const artillery = answer.artillery;
-    const armor = answer.armor;
-    const engineer = answer.engineer;
-    const signal = answer.signal;
-    const intelligence = answer.intelligence;
-
+  const combatScore = ({ infantry, artillery, armor, engineer, signal, intelligence }) => {
     setScore((score) => ({
       ...score,
       combat: {
