@@ -8,6 +8,7 @@ import Category from "../pages/Category";
 import Combat from "../pages/Combat";
 import Supply from "../pages/Supply";
 import theme from "../theme";
+import Landing from "../pages/Landing";
 
 const App = () => {
   const [score, setScore] = useState(DEFAULTSCORE);
@@ -21,7 +22,7 @@ const App = () => {
         <GlobalStyle />
         <Router>
           <Route exact path="/">
-            <p>landing Page</p>
+            <Landing></Landing>
           </Route>
           <Route path="/category">
             <Category score={score} setScore={setScore}></Category>
