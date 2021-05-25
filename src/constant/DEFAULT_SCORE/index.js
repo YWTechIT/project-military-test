@@ -1,5 +1,5 @@
 // 초기점수
-const DEFAULTSCORE = {
+const DEFAULT_SCORE = {
     category: {
       combatScore: 0,
       supplyScore: 0,
@@ -22,4 +22,4 @@ const DEFAULTSCORE = {
     },
   };
   
-  export default DEFAULTSCORE;
+  export default DEFAULT_SCORE;
