@@ -5,20 +5,36 @@ import { useHistory } from "react-router-dom";
 import { COMBAT_QUIZ } from "./Constant";
 import AnswerGroup from "../../components/AnswerGroup";
 
-const Combat = ({ setScore }) => {
+const Combat = ({ score, setScore }) => {
   let history = useHistory();
   const [currentNo, setCurrentNo] = useState(0);
 
-  const combatScore = ({ infantry, artillery, armor, engineer, signal, intelligence }) => {
+  const COMBAT_SCORE = {
+    infantryScore: score.combat.infantryScore,
+    artilleryScore: score.combat.artilleryScore,
+    armorScore: score.combat.armorScore,
+    engineerScore: score.combat.engineerScore,
+    signalScore: score.combat.signalScore,
+    intelligenceScore: score.combat.intelligenceScore,
+  };
+
+  const combatScore = ({ infantry, artillery, armor, engineer, signal, intelligence, }) => {
+    const infantryScore = COMBAT_SCORE.infantryScore;
+    const artilleryScore = COMBAT_SCORE.artilleryScore;
+    const armorScore = COMBAT_SCORE.armorScore;
+    const engineerScore = COMBAT_SCORE.engineerScore;
+    const signalScore = COMBAT_SCORE.signalScore;
+    const intelligenceScore = COMBAT_SCORE.intelligenceScore;
+
     setScore((score) => ({
       ...score,
       combat: {
-        infantryScore: score.combat.infantryScore + infantry,
-        artilleryScore: score.combat.artilleryScore + artillery,
-        armorScore: score.combat.armorScore + armor,
-        engineerScore: score.combat.engineerScore + engineer,
-        signalScore: score.combat.signalScore + signal,
-        intelligenceScore: score.combat.intelligenceScore + intelligence,
+        infantryScore: infantryScore + infantry,
+        artilleryScore: artilleryScore + artillery,
+        armorScore: armorScore + armor,
+        engineerScore: engineerScore + engineer,
+        signalScore: signalScore + signal,
+        intelligenceScore: intelligenceScore + intelligence,
       },
     }));
 
