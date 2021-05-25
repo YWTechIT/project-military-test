@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import DEFAULTSCORE from "../constant/defaultScore";
-import getMaxKey from "../utility/getMaxKey";
+import DEFAULT_SCORE from "../constant/DEFAULT_SCORE";
+import getMaxValueKey from "../utility/getMaxKey";
 import GlobalStyle from "../globalStyle";
 import Category from "../pages/Category";
 import Combat from "../pages/Combat";
@@ -11,10 +11,10 @@ import theme from "../theme";
 import Landing from "../pages/Landing";
 
 const App = () => {
-  const [score, setScore] = useState(DEFAULTSCORE);
-  const categoryKey = getMaxKey(score.category);
-  const combatKey = getMaxKey(score.combat);
-  const supplyKey = getMaxKey(score.supply);
+  const [score, setScore] = useState(DEFAULT_SCORE);
+
+  const combatKey = getMaxValueKey(score.combat);
+  const supplyKey = getMaxValueKey(score.supply);
 
   return (
     <>

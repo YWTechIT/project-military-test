@@ -1,6 +1,6 @@
 // 점수 계산하는 함수
 // object example
-// const DEFAULTSCORE = {
+// const DEFAULT_SCORE = {
 //   category: {
 //     combatScore: 0,
 //     supplyScore: 0,
@@ -23,7 +23,7 @@
 //   },
 // };
 
-const getMaxKey = (dict) => {
+const getMaxValueKey = (dict) => {
     let maxValue = 0;
     let maxKey = "";
 
@@ -36,4 +36,4 @@ const getMaxKey = (dict) => {
     return maxKey;
   };
 
-export default getMaxKey;
+export default getMaxValueKey;
