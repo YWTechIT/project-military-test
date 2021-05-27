@@ -19,8 +19,19 @@ const StyledButton = styled.button`
   }
 `;
 
+const ButtonWrapper = styled.div`
+  width: 100%;
+  text-align: center;
+  margin: 8px;
+`;
+
 const Button = (props) => {
-  return <StyledButton onClick={props.onClick}>{props.children}</StyledButton>;
+  return (
+    <>
+      <StyledButton onClick={props.onClick}>{props.children}</StyledButton>
+    </>
+  );
 };
 
-export default Button;
+export {ButtonWrapper};
+export {Button};
