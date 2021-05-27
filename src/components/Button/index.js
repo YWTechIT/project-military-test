@@ -1,7 +1,8 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
 const StyledButton = styled.button`
+  width: 88%;
   font-size: 18px;
   color: #ffffff;
   background-color: ${(props) => props.theme.primaryColor100};
@@ -11,7 +12,6 @@ const StyledButton = styled.button`
   height: 64px;
   margin-bottom: 8px;
   cursor: pointer;
-  width: 46vh;
   outline: none;
   font-weight: 700;
   &:hover {
@@ -20,7 +20,7 @@ const StyledButton = styled.button`
 `;
 
 const Button = (props) => {
-  return <StyledButton onClick={props.onClick}>{props.children}</StyledButton>
-}
+  return <StyledButton onClick={props.onClick}>{props.children}</StyledButton>;
+};
 
 export default Button;

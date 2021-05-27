@@ -5,6 +5,7 @@ const FlexBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 24px;
 `;
 
 const ContainerWrapper = styled.div`
@@ -12,7 +13,7 @@ const ContainerWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 400px;
-  margin-top: 10px;
+  
 `;
 
 const Container = (props) => (
