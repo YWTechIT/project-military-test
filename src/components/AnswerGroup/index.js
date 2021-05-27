@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, ButtonWrapper } from "../../components/Button";
+import Button from "../Button";
 import styled from "styled-components";
 
 const AnswerGroupWrapper = styled.div`

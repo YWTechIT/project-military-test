@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import landing from "../../assets/landing.jpg";
-import { Button, ButtonWrapper } from "../../components/Button";
+import Button from "../../components/Button";
 import Container from "../../components/Container";
+import LinkWrapper from "../../components/LinkWrapper";
 
 const Title = styled.h1`
   font-size: 30px;
@@ -45,11 +46,11 @@ const Landing = () => {
           2040년, 병무청 서버 해킹으로 인해 입영기록이 통째로 날라갔다. 어느날
           SNS에서 이런 문자가 날라온다면.. 나는 어떤 병과를 선택할까?
         </Text>
-        <ButtonWrapper>
+        <LinkWrapper>
           <Link to="/category">
             <Button>테스트 시작 하기</Button>
           </Link>
-        </ButtonWrapper>
+        </LinkWrapper>
       </Container>
     </>
   );
