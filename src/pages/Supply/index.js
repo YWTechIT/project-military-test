@@ -9,23 +9,23 @@ const Supply = ({ score, setScore }) => {
   let history = useHistory();
   const [currentNo, setCurrentNo] = useState(0);
 
-  const supplyScore = (answer) => {
-    const affair = answer.affair;
-    const medic = answer.medic;
-    const weapon = answer.weapon;
-    const police = answer.police;
-    const pray = answer.pray;
-    const band = answer.band;
+  const supplyScore = ({ affair, medic, weapon, police, pray, band }) => {
+    const affairScore = score.supply.affairScore;
+    const medicScore = score.supply.medicScore;
+    const weaponScore = score.supply.weaponScore;
+    const policeScore = score.supply.policeScore;
+    const prayScore = score.supply.prayScore;
+    const bandScore = score.supply.bandScore;
 
     setScore((score) => ({
       ...score,
       supply: {
-        affairScore: score.supply.affairScore + affair,
-        medicScore: score.supply.medicScore + medic,
-        weaponScore: score.supply.weaponScore + weapon,
-        policeScore: score.supply.policeScore + police,
-        prayScore: score.supply.prayScore + pray,
-        bandScore: score.supply.bandScore + band,
+        affairScore: affairScore + affair,
+        medicScore: medicScore + medic,
+        weaponScore: weaponScore + weapon,
+        policeScore: policeScore + police,
+        prayScore: prayScore + pray,
+        bandScore: bandScore + band,
       },
     }));
 

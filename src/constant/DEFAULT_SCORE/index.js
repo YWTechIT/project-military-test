@@ -1,7 +1,5 @@
-import React from 'react';
-
 // 초기점수
-const defaultScore = {
+const DEFAULT_SCORE = {
     category: {
       combatScore: 0,
       supplyScore: 0,
@@ -23,5 +21,5 @@ const defaultScore = {
       bandScore: 0,
     },
   };
-
-export default defaultScore;
+  
+  export default DEFAULT_SCORE;
