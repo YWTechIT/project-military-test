@@ -9,22 +9,17 @@ const Combat = ({ score, setScore }) => {
   let history = useHistory();
   const [currentNo, setCurrentNo] = useState(0);
 
-  const COMBAT_SCORE = {
-    infantryScore: score.combat.infantryScore,
-    artilleryScore: score.combat.artilleryScore,
-    armorScore: score.combat.armorScore,
-    engineerScore: score.combat.engineerScore,
-    signalScore: score.combat.signalScore,
-    intelligenceScore: score.combat.intelligenceScore,
-  };
-
-  const combatScore = ({ infantry, artillery, armor, engineer, signal, intelligence, }) => {
-    const infantryScore = COMBAT_SCORE.infantryScore;
-    const artilleryScore = COMBAT_SCORE.artilleryScore;
-    const armorScore = COMBAT_SCORE.armorScore;
-    const engineerScore = COMBAT_SCORE.engineerScore;
-    const signalScore = COMBAT_SCORE.signalScore;
-    const intelligenceScore = COMBAT_SCORE.intelligenceScore;
+  const combatScore = ({ infantry, artillery, armor, engineer, signal, intelligence }) => {
+    const {
+      combat: {
+        infantryScore,
+        artilleryScore,
+        armorScore,
+        engineerScore,
+        signalScore,
+        intelligenceScore,
+      },
+    } = score;
 
     setScore((score) => ({
       ...score,
@@ -39,7 +34,7 @@ const Combat = ({ score, setScore }) => {
     }));
 
     if (currentNo === COMBAT_QUIZ.length - 1) {
-      history.push("/loading");
+      history.push("/result");
     } else {
       setCurrentNo((currentNo) => currentNo + 1);
     }

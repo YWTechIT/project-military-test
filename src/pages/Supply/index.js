@@ -5,17 +5,13 @@ import Container from "../../components/Container";
 import Question from "../../components/Question";
 import { SUPPLY_QUIZ } from "./Constant";
 
+
 const Supply = ({ score, setScore }) => {
   let history = useHistory();
   const [currentNo, setCurrentNo] = useState(0);
 
   const supplyScore = ({ affair, medic, weapon, police, pray, band }) => {
-    const affairScore = score.supply.affairScore;
-    const medicScore = score.supply.medicScore;
-    const weaponScore = score.supply.weaponScore;
-    const policeScore = score.supply.policeScore;
-    const prayScore = score.supply.prayScore;
-    const bandScore = score.supply.bandScore;
+    const {supply: {affairScore, medicScore, weaponScore, policeScore, prayScore, bandScore}} = score;
 
     setScore((score) => ({
       ...score,
@@ -30,7 +26,7 @@ const Supply = ({ score, setScore }) => {
     }));
 
     if (currentNo === SUPPLY_QUIZ.length - 1) {
-      history.push("/loading");
+      history.push("/result");
     } else {
       setCurrentNo((currentNo) => currentNo + 1);
     }
