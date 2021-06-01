@@ -16,7 +16,8 @@ const App = () => {
   const [score, setScore] = useState(DEFAULT_SCORE);
   const currentPage = getCurrentPage(score.combat, score.supply);
   const maxKey = getMaxValueKey(currentPage);
-  console.log(setScore);
+  console.log(score.category)
+
 
   return (
     <>
@@ -36,7 +37,7 @@ const App = () => {
             <Supply score={score} setScore={setScore}></Supply>
           </Route>
           <Route path="/result">
-            <Result maxKey={maxKey}></Result>
+            <Result setScore = {setScore} maxKey={maxKey}></Result>
           </Route>
         </Router>
       </ThemeProvider>
