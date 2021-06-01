@@ -3,8 +3,11 @@ import Container from "../../components/Container";
 import ResultSection from "../../components/ResultSection";
 import Button from "../../components/Button";
 import DEFAULT_SCORE from "../../constant/DEFAULT_SCORE";
+import { useParams } from "react-router-dom";
 
 const Result = ({ setScore, maxKey }) => {
+  const { cCode } = useParams();
+
   return (
     <>
       <Container>
