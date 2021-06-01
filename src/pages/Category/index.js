@@ -8,9 +8,11 @@ import { CATEGORIZE_QUIZ } from "./Constant";
 const Category = ({ score, setScore }) => {
   let history = useHistory();
   const [currentNo, setCurrentNo] = useState(0);
-  
+
   const categoryScore = ({ combat, supply }) => {
-    const {category: {combatScore, supplyScore}} = score;
+    const {
+      category: { combatScore, supplyScore },
+    } = score;
 
     setScore((score) => ({
       ...score,

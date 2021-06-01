@@ -5,23 +5,40 @@ import Container from "../../components/Container";
 import Question from "../../components/Question";
 import { SUPPLY_QUIZ } from "./Constant";
 
-
 const Supply = ({ score, setScore }) => {
   let history = useHistory();
   const [currentNo, setCurrentNo] = useState(0);
 
-  const supplyScore = ({ affair, medic, weapon, police, pray, band }) => {
-    const {supply: {affairScore, medicScore, weaponScore, policeScore, prayScore, bandScore}} = score;
+  const supplyScore = (answer) => {
+    const {
+      supply: {
+        affair,
+        medic,
+        weapon,
+        police,
+        pray,
+        band,
+      },
+    } = score;
+
+    const {
+      affair: gainAffair,
+      medic: gainMedic,
+      weapon: gainWeapon,
+      police: gainPolice,
+      pray: gainPray,
+      band: gainBand,
+    } = answer;
 
     setScore((score) => ({
       ...score,
       supply: {
-        affairScore: affairScore + affair,
-        medicScore: medicScore + medic,
-        weaponScore: weaponScore + weapon,
-        policeScore: policeScore + police,
-        prayScore: prayScore + pray,
-        bandScore: bandScore + band,
+        affair: affair + gainAffair,
+        medic: medic + gainMedic,
+        weapon: weapon + gainWeapon,
+        police: police + gainPolice,
+        pray: pray + gainPray,
+        band: band + gainBand,
       },
     }));
 
