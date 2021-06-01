@@ -34,7 +34,7 @@ const Combat = ({ score, setScore }) => {
     }));
 
     if (currentNo === COMBAT_QUIZ.length - 1) {
-      history.push("/result");
+      history.push("/loading");
     } else {
       setCurrentNo((currentNo) => currentNo + 1);
     }

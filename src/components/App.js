@@ -11,6 +11,7 @@ import Landing from "../pages/Landing";
 import Result from "../pages/Result";
 import getCurrentPage from "../utility/getCurrentPage";
 import getMaxValueKey from "../utility/getMaxValueKey";
+import Loading from "../pages/Loading";
 
 const App = () => {
   const [score, setScore] = useState(DEFAULT_SCORE);
@@ -35,6 +36,9 @@ const App = () => {
           </Route>
           <Route path="/supply">
             <Supply score={score} setScore={setScore}></Supply>
+          </Route>
+          <Route path="/loading">
+            <Loading />
           </Route>
           <Route path="/result">
             <Result setScore = {setScore} maxKey={maxKey}></Result>
