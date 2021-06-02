@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import SocialButtonGroup from "../SocialButtonGroup";
 import RESULT from "./result";
 
 const SectionTitle = styled.h1`
@@ -34,6 +35,7 @@ const ResultSection = ({ cCode }) => {
       <SectionTitle>당신은 혹시?</SectionTitle>
       <StyledImage src={RESULT[cCode].src} />
       <ResultTitle>{RESULT[cCode].title}</ResultTitle>
+      <SocialButtonGroup></SocialButtonGroup>
     </>
   );
 };
