@@ -49,6 +49,19 @@ const KakaoIcon = styled.img`
   border-radius: 24px;
 `;
 
+const FlexContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Title = styled.div`
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: bold;
+`;
+
 const SocialButtonGroup = () => {
   const currentUrl = window.location.href;
   const status = useScript("https://developers.kakao.com/sdk/js/kakao.js");
@@ -66,20 +79,23 @@ const SocialButtonGroup = () => {
   }, [status]);
 
   return (
-    <GridContainer>
-      <CopyToClipboard text={currentUrl}>
-        <URLShareButton>URL</URLShareButton>
-      </CopyToClipboard>
-      <KakaoShareButton onClick={handleKakaoButton}>
-        <KakaoIcon src={kakaoLogo}></KakaoIcon>
-      </KakaoShareButton>
-      <FacebookShareButton url={currentUrl}>
-        <FacebookIcon size={48} round={true} borderRadius={24}></FacebookIcon>
-      </FacebookShareButton>
-      <LineShareButton url={currentUrl}>
-        <LineIcon size={48} round={true} borderRadius={24}></LineIcon>
-      </LineShareButton>
-    </GridContainer>
+    <FlexContainer>
+      <Title>나의 결과 공유하기</Title>
+      <GridContainer>
+        <CopyToClipboard text={currentUrl}>
+          <URLShareButton>URL</URLShareButton>
+        </CopyToClipboard>
+        <KakaoShareButton onClick={handleKakaoButton}>
+          <KakaoIcon src={kakaoLogo}></KakaoIcon>
+        </KakaoShareButton>
+        <FacebookShareButton url={currentUrl}>
+          <FacebookIcon size={48} round={true} borderRadius={24}></FacebookIcon>
+        </FacebookShareButton>
+        <LineShareButton url={currentUrl}>
+          <LineIcon size={48} round={true} borderRadius={24}></LineIcon>
+        </LineShareButton>
+      </GridContainer>
+    </FlexContainer>
   );
 };
 
