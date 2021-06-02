@@ -1,33 +1,33 @@
 /*
  * Parameter detail of getCurrentPage
  *
- * @ param {dict, dict}
+ * @ param {Object, Object}
  *
  * @ example
- *  combatDict = {
- *  infantryScore: 0,
- *  artilleryScore: 0,
- *  ...
+ *  combat = {
+ *      infantry: 0,
+ *      artillery: 0,
+ *      ...
  *  }
  *
- *  supplyDict = {
- *  affairScore: 0,
- *  medicScore: 0,
+ *  supply = {
+ *      affair: 0,
+ *      medic: 0,
  *  ...
  *  }
  */
 
-const getCurrentPage = (combatDict, supplyDict) => {
+const getCurrentPage = (combat, supply) => {
   let sum = 0;
   let currentPage;
 
-  for (let combatDictKeys in combatDict) {
-    sum += combatDict[combatDictKeys];
+  for (let combatKeys in combat) {
+    sum += combat[combatKeys];
   }
   if (sum === 0) {
-    currentPage = supplyDict;
+    currentPage = supply;
   } else {
-    currentPage = combatDict;
+    currentPage = combat;
   }
   return currentPage;
 };

@@ -1,30 +1,30 @@
 /*
  * Parameter detail of getMaxValueKey
  *
- * @ param {dict}
+ * @ param {Object}
  *
  * @ example
  *  combat = {
- *  infantryScore: 0,
- *  artilleryScore: 0,
- *  ...
+ *      infantry: 0,
+ *      artillery: 0,
+ *      ...
  *  }
  *
  *  supply = {
- *  affairScore: 0,
- *  medicScore: 0,
- *  ...
+ *      affair: 0,
+ *      medic: 0,
+ *      ...
  *  }
  */
 
-const getMaxValueKey = (dict) => {
+const getMaxValueKey = (Obj) => {
   let maxValue = 0;
   let maxKey = "";
 
-  for (let dictKey in dict) {
-    if (dict[dictKey] > maxValue) {
-      maxValue = dict[dictKey];
-      maxKey = dictKey;
+  for (let ObjKey in Obj) {
+    if (Obj[ObjKey] > maxValue) {
+      maxValue = Obj[ObjKey];
+      maxKey = ObjKey;
     }
   }
   return maxKey;
