@@ -9,29 +9,28 @@ const Combat = ({ score, setScore }) => {
   let history = useHistory();
   const [currentNo, setCurrentNo] = useState(0);
 
-  const combatScore = (answer) => {
-    const {
-      infantry: gainInfantry,
-      artillery: gainArtillery,
-      armor: gainArmor,
-      engineer: gainEngineer,
-      signal: gainSignal,
-      intelligence: gainIntelligence,
-    } = answer;
+  const combatScore = ({
+    infantry,
+    artillery,
+    armor,
+    engineer,
+    signal,
+    intelligence,
+  }) => {
 
     const {
-      combat: { infantry, artillery, armor, engineer, signal, intelligence },
-    } = score;
+      combat: { infantry: originInfantry, artillery: originArtillery, armor: originArmor, engineer: originEngineer, signal: originSignal, intelligence: originIntelligence, }
+      } = score;
 
     setScore((score) => ({
       ...score,
       combat: {
-        infantry: infantry + gainInfantry,
-        artillery: artillery + gainArtillery,
-        armor: armor + gainArmor,
-        engineer: engineer + gainEngineer,
-        signal: signal + gainSignal,
-        intelligence: intelligence + gainIntelligence,
+        infantry: originInfantry + infantry,
+        artillery: originArtillery + artillery,
+        armor: originArmor + armor,
+        engineer: originEngineer + engineer,
+        signal: originSignal + signal,
+        intelligence: originIntelligence + intelligence,
       },
     }));
 
