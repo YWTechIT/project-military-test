@@ -1,11 +1,9 @@
-// import React from "react";
 import styled from "styled-components";
 
 const HorizonStyle = styled.hr`
     width: 80%;
-    height: 3%;
-    lineHeight: 0.1em;
-    margin: 10px 0 20px;
+    border: 0px;
+    border-bottom: 1px solid;
     background: #fffff;
 `;
 
