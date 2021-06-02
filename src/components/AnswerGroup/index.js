@@ -8,6 +8,7 @@ const AnswerGroupWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 8px;
+  width: 100%;
 `;
 
 const AnswerGroup = ({ QUIZZES, currentNo, handleClick }) => {

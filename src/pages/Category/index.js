@@ -6,15 +6,13 @@ import Question from "../../components/Question";
 import { CATEGORIZE_QUIZ } from "./Constant";
 
 const Category = ({ score, setScore }) => {
-  const COMBAT_SCORE = score.category.combatScore;
-  const SUPPLY_SCORE = score.category.supplyScore;
-
   let history = useHistory();
   const [currentNo, setCurrentNo] = useState(0);
 
   const categoryScore = ({ combat, supply }) => {
-    const combatScore = COMBAT_SCORE;
-    const supplyScore = SUPPLY_SCORE;
+    const {
+      category: { combatScore, supplyScore },
+    } = score;
 
     setScore((score) => ({
       ...score,
@@ -32,7 +30,6 @@ const Category = ({ score, setScore }) => {
       }
     } else {
       setCurrentNo((currentNo) => currentNo + 1);
-      console.log(combatScore, supplyScore);
     }
   };
 

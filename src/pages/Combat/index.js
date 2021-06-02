@@ -9,32 +9,29 @@ const Combat = ({ score, setScore }) => {
   let history = useHistory();
   const [currentNo, setCurrentNo] = useState(0);
 
-  const COMBAT_SCORE = {
-    infantryScore: score.combat.infantryScore,
-    artilleryScore: score.combat.artilleryScore,
-    armorScore: score.combat.armorScore,
-    engineerScore: score.combat.engineerScore,
-    signalScore: score.combat.signalScore,
-    intelligenceScore: score.combat.intelligenceScore,
-  };
+  const combatScore = (answer) => {
+    const {
+      infantry: gainInfantry,
+      artillery: gainArtillery,
+      armor: gainArmor,
+      engineer: gainEngineer,
+      signal: gainSignal,
+      intelligence: gainIntelligence,
+    } = answer;
 
-  const combatScore = ({ infantry, artillery, armor, engineer, signal, intelligence, }) => {
-    const infantryScore = COMBAT_SCORE.infantryScore;
-    const artilleryScore = COMBAT_SCORE.artilleryScore;
-    const armorScore = COMBAT_SCORE.armorScore;
-    const engineerScore = COMBAT_SCORE.engineerScore;
-    const signalScore = COMBAT_SCORE.signalScore;
-    const intelligenceScore = COMBAT_SCORE.intelligenceScore;
+    const {
+      combat: { infantry, artillery, armor, engineer, signal, intelligence },
+    } = score;
 
     setScore((score) => ({
       ...score,
       combat: {
-        infantryScore: infantryScore + infantry,
-        artilleryScore: artilleryScore + artillery,
-        armorScore: armorScore + armor,
-        engineerScore: engineerScore + engineer,
-        signalScore: signalScore + signal,
-        intelligenceScore: intelligenceScore + intelligence,
+        infantry: infantry + gainInfantry,
+        artillery: artillery + gainArtillery,
+        armor: armor + gainArmor,
+        engineer: engineer + gainEngineer,
+        signal: signal + gainSignal,
+        intelligence: intelligence + gainIntelligence,
       },
     }));
 

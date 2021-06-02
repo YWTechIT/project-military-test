@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const QuestionWrapper = styled.div`
-  width: 56vh;
+  width: 100%;
 `;
 
 const QuestionLabel = styled.h1`
