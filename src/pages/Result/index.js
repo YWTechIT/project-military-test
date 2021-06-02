@@ -5,13 +5,13 @@ import Button from "../../components/Button";
 import DEFAULT_SCORE from "../../constant/DEFAULT_SCORE";
 import { useParams } from "react-router-dom";
 
-const Result = ({ setScore, maxKey }) => {
+const Result = ({ setScore }) => {
   const { cCode } = useParams();
 
   return (
     <>
       <Container>
-        <ResultSection maxKey={maxKey}></ResultSection>
+        <ResultSection cCode={cCode}></ResultSection>
         <Button onClick={() => setScore(DEFAULT_SCORE)} to="/">
           테스트 다시하기
         </Button>
