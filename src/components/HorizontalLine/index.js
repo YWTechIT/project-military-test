@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 const HorizonStyle = styled.hr`
+    color: dimgrey;
     width: 80%;
-    border: 0px;
-    border-bottom: 1px solid;
+    margin: 40px 8px;
+    border: 1px;
+    border-bottom: 2px solid;
     background: #fffff;
 `;
 
