@@ -34,6 +34,9 @@ const RESULT = {
     opposite: "의무 병과",
     similar_icon: INTELLIGENCE_ICON,
     opposite_icon: MEDIC_ICON,
+    similar_text: 'intelligence',
+    opposite_text: 'medic',
+
   },
   artillery: {
     title: "포병",
@@ -45,6 +48,8 @@ const RESULT = {
     opposite: "군종 병과",
     similar_icon: ENGINEER_ICON,
     opposite_icon: PRAY_ICON,
+    similar_text: 'engineer',
+    opposite_text: 'pray',
   },
   armor: {
     title: "기갑",
@@ -52,10 +57,12 @@ const RESULT = {
     hashTag: "# 기갑 # 멋 # 권총 # 왕자",
     description:
       "기갑병과는 전차를 이용하여 기동전을 구사하는 병과로서 보병과 더불어 근접전투를 주로 하는 병과이다. 탱크를 보면 보통 '멋있다' 는 생각이 강하게 든다. 또, 개인화기로 소총 대신 권총을 사용하는데 기갑을 제외한 타 병과에서는 권총을 자주 볼 일이 없기 때문에 더 멋있게 보인다. 영화 퓨리를 보고 한쪽 가슴이 웅장해진다거나, 멋을 중요하게 여긴다거나, 살면서 언제 탱크 타보겠어?! 라고 생각하면 기갑을 지원해보자. ",
-    similar: "헌병 병과",
+    similar: "포병 병과",
     opposite: "보병 병과",
-    similar_icon: POLICE_ICON,
+    similar_icon: ARTILLERY_ICON,
     opposite_icon: INFANTRY_ICON,
+    similar_text: 'artillery',
+    opposite_text: 'infantry',
   },
   engineer: {
     title: "공병",
@@ -67,6 +74,8 @@ const RESULT = {
     opposite: "군악 병과",
     similar_icon: POLICE_ICON,
     opposite_icon: BAND_ICON,
+    similar_text: 'police',
+    opposite_text: 'band',
   },
   signal: {
     title: "통신",
@@ -78,6 +87,8 @@ const RESULT = {
     opposite: "보병 병과",
     similar_icon: WEAPON_ICON,
     opposite_icon: INFANTRY_ICON,
+    similar_text: 'weapon',
+    opposite_text: 'infantry',
   },
   intelligence: {
     title: "정보",
@@ -89,6 +100,8 @@ const RESULT = {
     opposite: "정훈 병과",
     similar_icon: SIGNAL_ICON,
     opposite_icon: AFFAIR_ICON,
+    similar_text: 'signal',
+    opposite_text: 'affair',
   },
   affair: {
     title: "정훈",
@@ -100,6 +113,8 @@ const RESULT = {
     opposite: "병기 병과",
     similar_icon: PRAY_ICON,
     opposite_icon: WEAPON_ICON,
+    similar_text: 'pray',
+    opposite_text: 'weapon',
   },
   band: {
     title: "군악",
@@ -111,6 +126,8 @@ const RESULT = {
     opposite: "병기 병과",
     similar_icon: SIGNAL_ICON,
     opposite_icon: WEAPON_ICON,
+    similar_text: 'signal',
+    opposite_text: 'weapon',
   },
   medic: {
     title: "의무",
@@ -122,6 +139,8 @@ const RESULT = {
     opposite: "보병 병과",
     similar_icon: PRAY_ICON,
     opposite_icon: INFANTRY_ICON,
+    similar_text: 'pray',
+    opposite_text: 'infantry',
   },
   police: {
     title: "헌병",
@@ -133,6 +152,8 @@ const RESULT = {
     opposite: "보병 병과",
     similar_icon: WEAPON_ICON,
     opposite_icon: INFANTRY_ICON,
+    similar_text: 'weapon',
+    opposite_text: 'infantry',
   },
   pray: {
     title: "군종",
@@ -144,6 +165,8 @@ const RESULT = {
     opposite: "기갑 병과",
     similar_icon: BAND_ICON,
     opposite_icon: ARMOR_ICON,
+    similar_text: 'band',
+    opposite_text: 'armor',
   },
   weapon: {
     title: "병기",
@@ -155,6 +178,8 @@ const RESULT = {
     opposite: "정훈 병과",
     similar_icon: SIGNAL_ICON,
     opposite_icon: AFFAIR_ICON,
+    similar_text: 'signal',
+    opposite_text: 'affair',
   },
 };
 
