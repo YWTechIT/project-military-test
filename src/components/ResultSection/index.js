@@ -44,8 +44,8 @@ const ResultSection = ({ cCode }) => {
       </DescriptionWrapper>
       <HorizonLine />
       <OtherInstanceWrapper>
-        <OtherInstance otherLink = {RESULT[cCode].similar_text} otherInstanceICON = {RESULT[cCode].similar_icon} otherInstanceText = {RESULT[cCode].similar}># 나와 비슷한 병과는...</OtherInstance>
-        <OtherInstance otherLink = {RESULT[cCode].opposite_text} otherInstanceICON = {RESULT[cCode].opposite_icon} otherInstanceText = {RESULT[cCode].opposite}># 나와 반대인 병과는...</OtherInstance>
+        <OtherInstance otherLink = {RESULT[cCode].similar_text} otherInstanceICON = {RESULT[cCode].similar_icon} otherInstanceText = {RESULT[cCode].similar}># 나와 비슷한 병과</OtherInstance>
+        <OtherInstance otherLink = {RESULT[cCode].opposite_text} otherInstanceICON = {RESULT[cCode].opposite_icon} otherInstanceText = {RESULT[cCode].opposite}># 나와 반대인 병과</OtherInstance>
       </OtherInstanceWrapper>
       <HorizonLine />
       <SocialButtonGroup></SocialButtonGroup>

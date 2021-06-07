@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import ResultText from "../ResultText";
 import ResultTitle from "../ResultTitle";
 
