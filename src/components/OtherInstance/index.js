@@ -1,19 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import ResultText from "../ResultText";
+import ResultTitle from "../ResultTitle";
+import StyledLink from "../StyledLink";
 
-const OtherInstanceContent = styled.div`
+const OtherInstanceFlex = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-const OtherInstanceTitle = styled.p`
-  color: ${(props) => props.theme.hashTag};
-  font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 20px;
-  text-align: center;
 `;
 
 const OtherInstanceImg = styled.img`
@@ -24,28 +18,16 @@ const OtherInstanceImg = styled.img`
   }
 `;
 
-const OtherInstanceText = styled.p`
-  color: black;
-  font-size: 20px;
-`;
-
-const ImageLink = styled(Link)`
-  width: 100%;
-  text-align: center;
-  margin: 8px;
-
-`;
-
 const OtherInstance = ({ otherLink, otherInstanceICON, otherInstanceText, children }) => {
   return (
     <>
-      <OtherInstanceContent>
-        <OtherInstanceTitle>{children}</OtherInstanceTitle>
-        <ImageLink to = {otherLink}>
+      <OtherInstanceFlex>
+        <ResultTitle>{children}</ResultTitle>
+        <StyledLink to = {otherLink}>
           <OtherInstanceImg src={otherInstanceICON}></OtherInstanceImg>
-        </ImageLink>
-        <OtherInstanceText>{otherInstanceText}</OtherInstanceText>
-      </OtherInstanceContent>
+        </StyledLink>
+        <ResultText>{otherInstanceText}</ResultText>
+      </OtherInstanceFlex>
     </>
   );
 };
