@@ -17,7 +17,7 @@ const SectionTitle = styled.h1`
 const StyledImage = styled.img`
   display: block;
   border-radius: 16px;
-  opacity: 95%;
+  opacity: 90%;
   margin-bottom: 4px;
   max-width: 94%;
 `;
