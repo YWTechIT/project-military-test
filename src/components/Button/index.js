@@ -9,7 +9,7 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledButton = styled.button`
-  width: 88%;
+  width: 80%;
   font-size: 18px;
   color: #ffffff;
   background-color: ${(props) => props.theme.primaryColor100};

@@ -5,15 +5,15 @@ const FlexBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 24px;
+  margin-top: 32px;
 `;
 
 const ContainerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 400px;
-  
+  width: 500px;
+  padding: 0px 8px;
 `;
 
 const Container = (props) => (
