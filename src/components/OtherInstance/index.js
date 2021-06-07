@@ -18,15 +18,15 @@ const OtherInstanceImg = styled.img`
   }
 `;
 
-const OtherInstance = ({ otherLink, otherInstanceICON, otherInstanceText, children }) => {
+const OtherInstance = ({ otherInstanceLink, otherInstanceICON, otherInstanceName, children }) => {
   return (
     <>
       <OtherInstanceFlex>
         <ResultTitle>{children}</ResultTitle>
-        <StyledLink to = {otherLink}>
+        <StyledLink to = {otherInstanceLink}>
           <OtherInstanceImg src={otherInstanceICON}></OtherInstanceImg>
         </StyledLink>
-        <ResultText>{otherInstanceText}</ResultText>
+        <ResultText>{otherInstanceName}</ResultText>
       </OtherInstanceFlex>
     </>
   );

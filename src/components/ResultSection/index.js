@@ -38,17 +38,17 @@ const ResultSection = ({ cCode }) => {
     <>
       <SectionTitle>나와 잘 어울리는 병과는?</SectionTitle>
       <StyledImage src={RESULT[cCode].src} />
-      <HorizonLine></HorizonLine>
+      <HorizonLine />
       <DescriptionWrapper>
-        <Description descriptionHashTag={RESULT[cCode].hashTag} descriptionText={RESULT[cCode].description}></Description>
+        <Description descriptionTitle={RESULT[cCode].hashTag} descriptionText={RESULT[cCode].description}></Description>
       </DescriptionWrapper>
       <HorizonLine />
       <OtherInstanceWrapper>
-        <OtherInstance otherLink = {RESULT[cCode].similar_text} otherInstanceICON = {RESULT[cCode].similar_icon} otherInstanceText = {RESULT[cCode].similar}># 나와 비슷한 병과</OtherInstance>
-        <OtherInstance otherLink = {RESULT[cCode].opposite_text} otherInstanceICON = {RESULT[cCode].opposite_icon} otherInstanceText = {RESULT[cCode].opposite}># 나와 반대인 병과</OtherInstance>
+        <OtherInstance otherInstanceLink= {RESULT[cCode].similar_link} otherInstanceICON = {RESULT[cCode].similar_icon} otherInstanceName = {RESULT[cCode].similar_name}># 나와 비슷한 병과</OtherInstance>
+        <OtherInstance otherInstanceLink = {RESULT[cCode].opposite_link} otherInstanceICON = {RESULT[cCode].opposite_icon} otherInstanceName = {RESULT[cCode].opposite_name}># 나와 반대인 병과</OtherInstance>
       </OtherInstanceWrapper>
       <HorizonLine />
-      <SocialButtonGroup></SocialButtonGroup>
+      <SocialButtonGroup />
     </>
   );
 };

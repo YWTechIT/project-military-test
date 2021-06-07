@@ -2,10 +2,10 @@ import React from "react";
 import ResultText from "../ResultText";
 import ResultTitle from "../ResultTitle";
 
-const Description = ({descriptionHashTag, descriptionText}) => {
+const Description = ({descriptionTitle, descriptionText}) => {
   return (
     <>
-      <ResultTitle>{descriptionHashTag}</ResultTitle>
+      <ResultTitle>{descriptionTitle}</ResultTitle>
       <ResultText>{descriptionText}</ResultText>
     </>
   );
