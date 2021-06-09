@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import getChangeParameterName from "../../utility/getChangeParameterName";
 import Description from "../Description";
 import HorizonLine from "../HorizontalLine";
 import OtherInstance from "../OtherInstance";
@@ -33,7 +34,9 @@ const OtherInstanceWrapper = styled.div`
   width: 90%;
 `;
 
-const ResultSection = ({ cCode }) => {
+const ResultSection = ({ cCode, currentPage }) => {
+  const changeParameter = getChangeParameterName(currentPage);
+  console.log(changeParameter);
   return (
     <>
       <SectionTitle>나와 잘 어울리는 병과는?</SectionTitle>

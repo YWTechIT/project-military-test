@@ -39,7 +39,7 @@ const App = () => {
             <Loading cCode={cCode}/>
           </Route>
           <Route path="/result/:cCode">
-            <Result setScore = {setScore} cCode={cCode}></Result>
+            <Result setScore = {setScore} currentPage={currentPage}></Result>
           </Route>
         </Router>
       </ThemeProvider>
