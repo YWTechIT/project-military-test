@@ -15,7 +15,7 @@ const QuestionLabel = styled.h1`
 const QuestionTitle = styled.div`
   font-size: 22px;
   padding: 20px;
-  margin-bottom: 8px;
+  margin: 0 10px; 
   box-sizing: border-box;
 `;
 

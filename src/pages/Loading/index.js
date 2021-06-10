@@ -12,7 +12,7 @@ const Title = styled.h1`
   text-align: center;
 `;
 
-const Loading = ({ maxKey }) => {
+const Loading = ({ cCode }) => {
   const [title, setTitle] = useState("결과 분석 중");
   let history = useHistory();
 
@@ -24,8 +24,8 @@ const Loading = ({ maxKey }) => {
   }, [title]);
 
   useEffect(() => {
-    setTimeout(() => history.push(`/result/${maxKey}`), 2700);
-  }, [history, maxKey]);
+    setTimeout(() => history.push(`/result/${cCode}`), 2700);
+  }, [history, cCode]);
 
   return (
     <Container>

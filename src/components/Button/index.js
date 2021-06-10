@@ -1,15 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-
-const StyledLink = styled(Link)`
-  width: 100%;
-  text-align: center;
-  margin: 8px;
-`;
+import StyledLink from "../StyledLink";
 
 const StyledButton = styled.button`
-  width: 88%;
+  width: 80%;
   font-size: 18px;
   color: #ffffff;
   background-color: ${(props) => props.theme.primaryColor100};

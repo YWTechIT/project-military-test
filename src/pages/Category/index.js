@@ -11,19 +11,19 @@ const Category = ({ score, setScore }) => {
 
   const categoryScore = ({ combat, supply }) => {
     const {
-      category: { combatScore, supplyScore },
+      category: { combat: originCombat, supply: originSupply },
     } = score;
 
     setScore((score) => ({
       ...score,
       category: {
-        combatScore: combatScore + combat,
-        supplyScore: supplyScore + supply,
+        combat: originCombat + combat,
+        supply: originSupply + supply,
       },
     }));
 
     if (currentNo === CATEGORIZE_QUIZ.length - 1) {
-      if (combatScore >= supplyScore) {
+      if (originCombat >= originSupply) {
         history.push("/combat");
       } else {
         history.push("/supply");

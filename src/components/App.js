@@ -16,7 +16,7 @@ import Loading from "../pages/Loading";
 const App = () => {
   const [score, setScore] = useState(DEFAULT_SCORE);
   const currentPage = getCurrentPage(score.combat, score.supply);
-  const maxKey = getMaxValueKey(currentPage);
+  const cCode = getMaxValueKey(currentPage);
 
   return (
     <>
@@ -36,10 +36,10 @@ const App = () => {
             <Supply score={score} setScore={setScore}></Supply>
           </Route>
           <Route path="/loading">
-            <Loading maxKey={maxKey}/>
+            <Loading cCode={cCode}/>
           </Route>
           <Route path="/result/:cCode">
-            <Result setScore = {setScore} maxKey={maxKey}></Result>
+            <Result setScore = {setScore} currentPage={currentPage}></Result>
           </Route>
         </Router>
       </ThemeProvider>
