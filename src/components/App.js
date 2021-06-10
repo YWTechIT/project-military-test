@@ -17,7 +17,6 @@ const App = () => {
   const [score, setScore] = useState(DEFAULT_SCORE);
   const highScoreObj = getHighScoreObj(score.combat, score.supply);
   const cCode = getMaxValueKey(highScoreObj);
-  console.log(highScoreObj);
 
   return (
     <>

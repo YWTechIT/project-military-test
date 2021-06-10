@@ -30,7 +30,7 @@ const StyledImage = styled.img`
 const Text = styled.div`
   width: 78%;
   font-size: 15px;
-  margin: 8px;
+  margin: 8px 0px 20px;
   line-height: 130%;
   @media screen and (min-width: 600px){
     font-size: 18px;

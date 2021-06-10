@@ -13,7 +13,7 @@ const Spinner = () => {
 
   return (
     <Flex>
-      <HashLoader size={160} color={color} />;
+      <HashLoader size={160} color={color} />
     </Flex>
   );
 };

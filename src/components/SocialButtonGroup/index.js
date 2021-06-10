@@ -15,7 +15,7 @@ const GridContainer = styled.div`
   grid-template-columns: repeat(4, 50px);
   justify-content: center;
   grid-column-gap: 10px;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 `;
 
 const URLShareButton = styled.button`

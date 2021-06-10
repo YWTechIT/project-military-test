@@ -10,10 +10,22 @@ const CardBoxFlex = styled.div`
   align-items: center;
 `;
 
+const ImgContainer = styled.div`
+  text-align: center;
+  width: 100%;
+`;
+
 const CardBoxImg = styled.img`
-  margin-bottom: 12px;
+  margin: 12px 0px;
   @media screen and (min-width: 600px) {
     width: 50%;
+  }
+`;
+
+const CardBoxText = styled.div`
+  font-size: 16px;
+  @media screen and (min-width: 600px) {
+    font-size: 20px;
   }
 `;
 
@@ -22,10 +34,12 @@ const CardBox = ({ cardBoxLink, cardBoxICON, cardBoxName, children }) => {
     <>
       <CardBoxFlex>
         <ResultTitle>{children}</ResultTitle>
-        <StyledLink to={cardBoxLink}>
-          <CardBoxImg src={cardBoxICON}></CardBoxImg>
-          <ResultText>{cardBoxName}</ResultText>
-        </StyledLink>
+        <ImgContainer>
+          <StyledLink to={cardBoxLink}>
+            <CardBoxImg src={cardBoxICON}></CardBoxImg>
+            <CardBoxText>{cardBoxName}</CardBoxText>
+          </StyledLink>
+        </ImgContainer>
       </CardBoxFlex>
     </>
   );
