@@ -20,6 +20,10 @@ const StyledButton = styled.button`
   &:hover {
     background-color: ${(props) => props.theme.primaryColor80};
   }
+  @media screen and (min-width: 600px){
+    font-size: 21px;
+    height: 70px;
+  }
 `;
 
 const Button = ({ to, onClick, children }) =>

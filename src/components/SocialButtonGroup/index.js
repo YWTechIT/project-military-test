@@ -24,7 +24,7 @@ const URLShareButton = styled.button`
   color: white;
   border-radius: 24px;
   border: 0px;
-  font-weight: 800;
+  font-weight: bold;
   font-size: 18px;
   cursor: pointer;
   background-color: ${(props) => props.theme.primaryColor100};
@@ -59,6 +59,9 @@ const Title = styled.h1`
   font-size: 20px;
   text-align: center;
   margin: 10px 0px 14px 0px;
+  @media screen and (min-width: 600px){
+    font-size: 24px;
+  }
 `;
 
 const SocialButtonGroup = () => {

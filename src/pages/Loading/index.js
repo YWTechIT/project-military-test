@@ -6,6 +6,9 @@ import { useHistory } from "react-router-dom";
 
 const Title = styled.h1`
   font-size: 48px;
+  @media screen and (min-width: 600px){
+    font-size: 54px;
+  }
 `;
 
 const Loading = ({ cCode }) => {

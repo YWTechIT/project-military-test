@@ -10,6 +10,9 @@ const QuestionLabel = styled.h1`
   margin-bottom: 8px;
   text-align: center;
   color: grey;
+  @media screen and (min-width: 600px){
+    font-size: 22px;
+  }
 `;
 
 const QuestionTitle = styled.div`
@@ -18,6 +21,9 @@ const QuestionTitle = styled.div`
   margin: 0 10px; 
   box-sizing: border-box;
   line-height: 135%;
+  @media screen and (min-width: 600px){
+    font-size: 24px;
+  }
 `;
 
 const Question = ({ QUIZZES, currentNo }) => (

@@ -7,11 +7,17 @@ import Container from "../../components/Container";
 const Title = styled.h1`
   font-size: 24px;
   margin: 4px;
+  @media screen and (min-width: 600px){
+    font-size: 32px;
+  }
 `;
 
 const SubTitle = styled.h2`
   font-size: 16px;
   margin: 4px;
+  @media screen and (min-width: 600px){
+    font-size: 20px;
+  }
 `;
 
 const StyledImage = styled.img`
@@ -26,6 +32,9 @@ const Text = styled.div`
   font-size: 15px;
   margin: 8px;
   line-height: 130%;
+  @media screen and (min-width: 600px){
+    font-size: 18px;
+  }
 `;
 
 const Landing = () => {

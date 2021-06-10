@@ -7,6 +7,9 @@ const HorizonStyle = styled.hr`
     border: 1px;
     border-bottom: 2px solid;
     background: #fffff;
+    @media screen and (min-width: 600px){
+      width: 86%;
+    }
 `;
 
 const HorizonLine = () => {

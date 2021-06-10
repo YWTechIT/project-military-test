@@ -8,17 +8,19 @@ const ProgressBarContainer = styled.div`
   box-sizing: border-box;
 `;
 
-const ProgressName = styled.div`
+const ProgressBarName = styled.div`
   width: 25%;
   font-weight: bold;
   margin-left: 14px;
+  @media screen and (min-width: 600px){
+    font-size: 18px;
+  }
 `;
 
 const GageContainer = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
-
 `;
 
 const Gage = styled.div`
@@ -26,6 +28,9 @@ const Gage = styled.div`
   width: 86%;
   background-color: ${(props) => props.theme.ProgressBarBg};
   border-radius: 50px;
+  @media screen and (min-width: 600px){
+    height: 16px;
+  }
 `;
 
 const GageFiller = styled.div`
@@ -40,7 +45,7 @@ const ProgressBar = (props) => {
 
   return (
     <ProgressBarContainer>
-      <ProgressName>{name}</ProgressName>
+      <ProgressBarName>{name}</ProgressBarName>
       <GageContainer>
         <Gage>
           <GageFiller percent={percent} />
