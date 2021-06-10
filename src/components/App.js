@@ -9,14 +9,15 @@ import Supply from "../pages/Supply";
 import theme from "../theme";
 import Landing from "../pages/Landing";
 import Result from "../pages/Result";
-import getCurrentPage from "../utility/getCurrentPage";
 import getMaxValueKey from "../utility/getMaxValueKey";
 import Loading from "../pages/Loading";
+import getHighScoreObj from "../utility/getHighScoreObj";
 
 const App = () => {
   const [score, setScore] = useState(DEFAULT_SCORE);
-  const currentPage = getCurrentPage(score.combat, score.supply);
-  const cCode = getMaxValueKey(currentPage);
+  const highScoreObj = getHighScoreObj(score.combat, score.supply);
+  const cCode = getMaxValueKey(highScoreObj);
+  console.log(highScoreObj);
 
   return (
     <>
@@ -39,7 +40,7 @@ const App = () => {
             <Loading cCode={cCode}/>
           </Route>
           <Route path="/result/:cCode">
-            <Result setScore = {setScore} currentPage={currentPage}></Result>
+            <Result setScore = {setScore} highScoreObj={highScoreObj}></Result>
           </Route>
         </Router>
       </ThemeProvider>

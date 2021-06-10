@@ -19,10 +19,10 @@
  *  }
  */
 
-const getChangeParameterName = (combatOrSupplyObj) => {
+const getChangeParameterName = (higherObj) => {
   let changeParameterName;
 
-  if ("infantry" in combatOrSupplyObj) {
+  if ("infantry" in higherObj) {
     const {
       infantry: 보병,
       artillery: 포병,
@@ -30,7 +30,7 @@ const getChangeParameterName = (combatOrSupplyObj) => {
       engineer: 공병,
       signal: 통신,
       intelligence: 정보,
-    } = { ...combatOrSupplyObj };
+    } = { ...higherObj };
     const changeCombatName = Object.assign({
       보병,
       포병,
@@ -48,7 +48,7 @@ const getChangeParameterName = (combatOrSupplyObj) => {
       pray: 군종,
       weapon: 병기,
       medic: 의무,
-    } = { ...combatOrSupplyObj };
+    } = { ...higherObj };
     const changeSupplyName = Object.assign({
       정훈,
       밴드,

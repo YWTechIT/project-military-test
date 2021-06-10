@@ -45,8 +45,8 @@ const CardBoxWrapper = styled.div`
   width: 94%;
 `;
 
-const ResultSection = ({ cCode, currentPage }) => {
-  const changeParameterObj = getChangeParameterName(currentPage);
+const ResultSection = ({ cCode, highScoreObj }) => {
+  const changeParameterObj = getChangeParameterName(highScoreObj);
 
   return (
     <>
@@ -55,8 +55,8 @@ const ResultSection = ({ cCode, currentPage }) => {
       <HorizonLine />
       <ProgressBarWrapper>
       <ResultTitle># 나의 측정 결과</ResultTitle>
-      {Object.entries(changeParameterObj).map((nameAndScore, idx) => (
-          <ProgressBar key={idx} name={nameAndScore[0]} percent={nameAndScore[1] * 10} />
+      {Object.entries(changeParameterObj).map((keyValue, idx) => (
+          <ProgressBar key={idx} name={keyValue[0]} percent={keyValue[1] * 10} />
       ))}
       </ProgressBarWrapper>
       <HorizonLine />

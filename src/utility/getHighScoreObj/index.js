@@ -17,19 +17,19 @@
  *  }
  */
 
-const getCurrentPage = (combat, supply) => {
+const getHighScoreObj = (combat, supply) => {
   let sum = 0;
-  let currentPage;
+  let highScore;
 
   for (let combatKeys in combat) {
     sum += combat[combatKeys];
   }
   if (sum === 0) {
-    currentPage = supply;
+    highScore = supply;
   } else {
-    currentPage = combat;
+    highScore = combat;
   }
-  return currentPage;
+  return highScore;
 };
 
-export default getCurrentPage;
+export default getHighScoreObj;
