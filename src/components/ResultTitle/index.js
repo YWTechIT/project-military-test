@@ -5,6 +5,7 @@ const ResultTitle = styled.h1`
   font-size: 20px;
   margin: 10px 5px 14px 5px;
   text-align: center;
+  word-break: keep-all;
 `;
 
 export default ResultTitle;

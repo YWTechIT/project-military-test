@@ -4,28 +4,26 @@ import styled from "styled-components";
 const ProgressBarContainer = styled.div`
   display: flex;
   text-align: center;
-  margin: 12px 0px;
+  margin: 12px 10px;
   box-sizing: border-box;
-  width: 100%;
-
 `;
 
 const ProgressName = styled.div`
   width: 25%;
   font-weight: bold;
-  margin-left: 15px;
+  margin-left: 14px;
 `;
 
 const GageContainer = styled.div`
   display: flex;
-  width: 75%;
+  width: 100%;
   align-items: center;
-  margin: 0px 40px 0px 0px;
+
 `;
 
 const Gage = styled.div`
   height: 12px;
-  width: 100%;
+  width: 86%;
   background-color: ${(props) => props.theme.ProgressBarBg};
   border-radius: 50px;
 `;

@@ -16,6 +16,7 @@ const StyledButton = styled.button`
   outline: none;
   font-weight: bold;
   line-height: 150%;
+  word-break: keep-all;
   &:hover {
     background-color: ${(props) => props.theme.primaryColor80};
   }

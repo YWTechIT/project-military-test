@@ -24,8 +24,7 @@ const StyledImage = styled.img`
 
 const ProgressWrapper = styled.div`
   align-items: center;
-  width: 103%;
-  margin: 0px 10px 16px 10px;
+  width: 100%;
 `;
 
 const DescriptionWrapper = styled.div`
@@ -60,8 +59,8 @@ const ResultSection = ({ cCode, currentPage }) => {
       </DescriptionWrapper>
       <HorizonLine />
       <OtherInstanceWrapper>
-        <OtherInstance otherInstanceLink= {RESULT[cCode].similar_link} otherInstanceICON = {RESULT[cCode].similar_icon} otherInstanceName = {RESULT[cCode].similar_name}># 비슷한 병과</OtherInstance>
-        <OtherInstance otherInstanceLink = {RESULT[cCode].opposite_link} otherInstanceICON = {RESULT[cCode].opposite_icon} otherInstanceName = {RESULT[cCode].opposite_name}># 반대인 병과</OtherInstance>
+        <OtherInstance otherInstanceLink= {RESULT[cCode].similar_link} otherInstanceICON = {RESULT[cCode].similar_icon} otherInstanceName = {RESULT[cCode].similar_name}># 나와 비슷한 병과</OtherInstance>
+        <OtherInstance otherInstanceLink = {RESULT[cCode].opposite_link} otherInstanceICON = {RESULT[cCode].opposite_icon} otherInstanceName = {RESULT[cCode].opposite_name}># 나와 반대인 병과</OtherInstance>
       </OtherInstanceWrapper>
       <HorizonLine />
       <SocialButtonGroup />
