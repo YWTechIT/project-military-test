@@ -4,26 +4,29 @@ import styled from "styled-components";
 const ProgressBarContainer = styled.div`
   display: flex;
   text-align: center;
-  margin: 10px 0px;
+  margin: 12px 0px;
   box-sizing: border-box;
-  min-width: 0px;
+  width: 100%;
+
 `;
 
 const ProgressName = styled.div`
   width: 25%;
+  font-weight: bold;
+  margin-left: 15px;
 `;
 
 const GageContainer = styled.div`
   display: flex;
   width: 75%;
   align-items: center;
-  margin: 0px 30px;
+  margin: 0px 40px 0px 0px;
 `;
 
 const Gage = styled.div`
-  height: 10px;
+  height: 12px;
   width: 100%;
-  background-color: lightgray;
+  background-color: ${(props) => props.theme.ProgressBarBg};
   border-radius: 50px;
 `;
 
@@ -48,5 +51,7 @@ const ProgressBar = (props) => {
     </ProgressBarContainer>
   );
 };
+
+
 
 export default ProgressBar;

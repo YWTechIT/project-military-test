@@ -7,14 +7,15 @@ const StyledButton = styled.button`
   font-size: 18px;
   color: #ffffff;
   background-color: ${(props) => props.theme.primaryColor100};
-  border-radius: 5px;
+  border-radius: 10px;
   border: 0px;
   padding: 4px;
-  height: 64px;
-  margin-bottom: 8px;
+  height: 60px;
+  margin-bottom: 10px;
   cursor: pointer;
   outline: none;
-  font-weight: 700;
+  font-weight: bold;
+  line-height: 150%;
   &:hover {
     background-color: ${(props) => props.theme.primaryColor80};
   }

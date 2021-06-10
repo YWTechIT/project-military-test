@@ -9,11 +9,13 @@
  *      artillery: 0,
  *      ...
  *  }
- *
+ * 
+ *  OR
+ * 
  *  supply = {
  *      affair: 0,
  *      medic: 0,
- *  ...
+ *      ...
  *  }
  */
 
@@ -42,7 +44,7 @@ const getChangeParameterName = (combatOrSupplyObj) => {
     const {
       affair: 정훈,
       band: 밴드,
-      police: 군사경찰,
+      police: 군경,
       pray: 군종,
       weapon: 병기,
       medic: 의무,
@@ -50,7 +52,7 @@ const getChangeParameterName = (combatOrSupplyObj) => {
     const changeSupplyName = Object.assign({
       정훈,
       밴드,
-      군사경찰,
+      군경,
       군종,
       병기,
       의무,

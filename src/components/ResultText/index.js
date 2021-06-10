@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
 const ResultText = styled.div`
-  font-size: 18px;
-  text-align: left;
+  font-size: 16px;
   line-height: 1.67em;
-  margin-left: 6px;
-  margin-right: 6px;
+  margin: 0px 6px;
 `;
 
 export default ResultText;

@@ -11,11 +11,7 @@ const OtherInstanceFlex = styled.div`
 `;
 
 const OtherInstanceImg = styled.img`
-  max-width: 50%;
-  margin-bottom: 4px;
-  &:hover {
-    background-color: ${(props) => props.theme.primaryColor30};
-  }
+  // align-items: center;
 `;
 
 const OtherInstance = ({ otherInstanceLink, otherInstanceICON, otherInstanceName, children }) => {

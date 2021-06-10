@@ -17,6 +17,7 @@ const QuestionTitle = styled.div`
   padding: 20px;
   margin: 0 10px; 
   box-sizing: border-box;
+  line-height: 135%;
 `;
 
 const Question = ({ QUIZZES, currentNo }) => (

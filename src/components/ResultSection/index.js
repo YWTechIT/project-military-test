@@ -10,37 +10,34 @@ import ProgressBar from '../ProgressBar';
 import ResultTitle from "../ResultTitle";
 
 const SectionTitle = styled.h1`
-  font-size: 32px;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  text-align: center;
+  font-size: 26px;
+  margin: 20px 10px;;
 `;
 
 const StyledImage = styled.img`
   display: block;
-  border-radius: 16px;
+  border-radius: 30px;
   opacity: 90%;
-  margin-bottom: 4px;
-  max-width: 94%;
+  margin: 0px 10px 16px 10px;
+  max-width: 90%;
 `;
 
 const ProgressWrapper = styled.div`
   align-items: center;
-  width: 80%;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 103%;
+  margin: 0px 10px 16px 10px;
 `;
 
 const DescriptionWrapper = styled.div`
   align-items: center;
-  width: 90%;
+  width: 86%;
+  margin: 0px 10px 16px 10px;
 `;
 
 const OtherInstanceWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  width: 90%;
+  justify-content: space-evenly;
+  width: 94%;
 `;
 
 const ResultSection = ({ cCode, currentPage }) => {
@@ -63,8 +60,8 @@ const ResultSection = ({ cCode, currentPage }) => {
       </DescriptionWrapper>
       <HorizonLine />
       <OtherInstanceWrapper>
-        <OtherInstance otherInstanceLink= {RESULT[cCode].similar_link} otherInstanceICON = {RESULT[cCode].similar_icon} otherInstanceName = {RESULT[cCode].similar_name}># 나와 비슷한 병과</OtherInstance>
-        <OtherInstance otherInstanceLink = {RESULT[cCode].opposite_link} otherInstanceICON = {RESULT[cCode].opposite_icon} otherInstanceName = {RESULT[cCode].opposite_name}># 나와 반대인 병과</OtherInstance>
+        <OtherInstance otherInstanceLink= {RESULT[cCode].similar_link} otherInstanceICON = {RESULT[cCode].similar_icon} otherInstanceName = {RESULT[cCode].similar_name}># 비슷한 병과</OtherInstance>
+        <OtherInstance otherInstanceLink = {RESULT[cCode].opposite_link} otherInstanceICON = {RESULT[cCode].opposite_icon} otherInstanceName = {RESULT[cCode].opposite_name}># 반대인 병과</OtherInstance>
       </OtherInstanceWrapper>
       <HorizonLine />
       <SocialButtonGroup />

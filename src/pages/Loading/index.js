@@ -5,11 +5,7 @@ import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 
 const Title = styled.h1`
-  font-size: 64px;
-  font-weight: bold;
-  margin: 8px;
-  margin-bottom: 96px;
-  text-align: center;
+  font-size: 48px;
 `;
 
 const Loading = ({ cCode }) => {
