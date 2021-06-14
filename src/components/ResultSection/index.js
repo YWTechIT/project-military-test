@@ -4,16 +4,17 @@ import Description from "../Description";
 import HorizonLine from "../HorizontalLine";
 import SocialButtonGroup from "../SocialButtonGroup";
 import RESULT from "./result";
-import ProgressBar from '../ProgressBar';
-import ResultTitle from "../ResultTitle";
+import ProgressBar from "../ProgressBar";
 import CardBox from "../CardBox";
+import PropTypes from "prop-types";
 
-const SectionTitle = styled.h1`
-  font-size: 26px;
+const ResultTitle = styled.h1`
   margin: 20px 10px;
-  @media screen and (min-width: 600px){
-    font-size: 36px;
-  }
+`;
+
+const SectionTitle = styled.h2`
+  color: ${(props) => props.theme.HashTag};
+  word-break: keep-all;
 `;
 
 const StyledImage = styled.img`
@@ -22,7 +23,7 @@ const StyledImage = styled.img`
   opacity: 90%;
   margin: 0px 10px 16px 10px;
   max-width: 90%;
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 600px) {
     max-width: 96%;
   }
 `;
@@ -45,31 +46,50 @@ const CardBoxWrapper = styled.div`
 `;
 
 const ResultSection = ({ cCode, queryId }) => {
-
   return (
     <>
-      <SectionTitle>나와 잘 어울리는 병과는?</SectionTitle>
+      <ResultTitle>나와 잘 어울리는 병과는?</ResultTitle>
       <StyledImage src={RESULT[cCode].src} />
       <HorizonLine />
       <ProgressBarWrapper>
-      <ResultTitle># 나의 측정 결과</ResultTitle>
-      {Object.entries(queryId).map(([key, value], idx) => (
+        <SectionTitle># 나의 측정 결과</SectionTitle>
+        {Object.entries(queryId).map(([key, value], idx) => (
           <ProgressBar key={idx} name={key} percent={value * 10} />
-      ))}
+        ))}
       </ProgressBarWrapper>
       <HorizonLine />
       <DescriptionWrapper>
-        <Description descriptionTitle={RESULT[cCode].hashTag} descriptionText={RESULT[cCode].description}></Description>
+        <Description
+          descriptionTitle={RESULT[cCode].hashTag}
+          descriptionText={RESULT[cCode].description}
+        ></Description>
       </DescriptionWrapper>
       <HorizonLine />
       <CardBoxWrapper>
-        <CardBox cardBoxLink= {RESULT[cCode].similar_link} cardBoxICON = {RESULT[cCode].similar_icon} cardBoxName = {RESULT[cCode].similar_name}># 나와 비슷한 병과</CardBox>
-        <CardBox cardBoxLink = {RESULT[cCode].opposite_link} cardBoxICON = {RESULT[cCode].opposite_icon} cardBoxName = {RESULT[cCode].opposite_name}># 나와 반대인 병과</CardBox>
+        <CardBox
+          cardBoxLink={RESULT[cCode].similar_link}
+          cardBoxICON={RESULT[cCode].similar_icon}
+          cardBoxName={RESULT[cCode].similar_name}
+        >
+          # 나와 비슷한 병과
+        </CardBox>
+        <CardBox
+          cardBoxLink={RESULT[cCode].opposite_link}
+          cardBoxICON={RESULT[cCode].opposite_icon}
+          cardBoxName={RESULT[cCode].opposite_name}
+        >
+          # 나와 반대인 병과
+        </CardBox>
       </CardBoxWrapper>
       <HorizonLine />
       <SocialButtonGroup />
     </>
   );
+};
+
+ResultSection.propTypes = {
+  cCode: PropTypes.string.isRequired,
+  queryId: PropTypes.object.isRequired,
 };
 
 export default ResultSection;
