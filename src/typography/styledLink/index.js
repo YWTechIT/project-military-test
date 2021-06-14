@@ -6,4 +6,4 @@ const StyledLink = styled(Link)`
   text-align: center;
 `;
 
-export default StyledLink
+export default StyledLink;
