@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet';
 import favicon from '../assets/favicon.ico';
+import landing from '../assets/landing.jpg';
 import { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
@@ -20,6 +21,7 @@ const App = () => {
   const highScoreObj = getHighScoreObj(score.combat, score.supply);
   const cCode = getMaxValueKey(highScoreObj);
   const queryStringHash = Object.values(highScoreObj).map((value) => {return String(value).padStart(3, 0)});
+  const currentUrl = document.location.href;
 
   return (
     <>
@@ -28,6 +30,17 @@ const App = () => {
         <Helmet>
           <title>나와 가장 어울리는 병과는 무엇일까?</title>
           <link rel="icon" href={favicon} />
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+          <meta property='og:url' content={currentUrl} />
+          <meta property='og:title' content="병과 테스트 하기" />
+          <meta property='og:description' content="내가 재입대를 하게 된다면 나와 맞는 병과는 무엇일까?" />
+          <meta property='og:image' content={landing}/>
+
+          <meta property='twitter:title' content="병과 테스트 하기" />
+          <meta property='twitter:description' content="내가 재입대를 하게 된다면 나와 맞는 병과는 무엇일까?" />
+          <meta property='twitter:image' content={landing}/>
         </Helmet>
         <Router>
           <Route exact path="/">
