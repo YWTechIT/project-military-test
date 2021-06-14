@@ -53,19 +53,19 @@ const getChangeParameterName = (higherObj, queryObj) => {
   } else {
     const {
       0: 정훈,
-      1: 밴드,
-      2: 군경,
-      3: 군종,
-      4: 병기,
-      5: 의무,
+      1: 의무,
+      2: 병기,
+      3: 군경,
+      4: 군종,
+      5: 군악,
     } = { ...queryObj };
     const SupplyObj = Object.assign({
       정훈,
-      밴드,
+      의무,
+      병기,
       군경,
       군종,
-      병기,
-      의무,
+      군악,
     });
     changeParameterKey = SupplyObj;
   }
