@@ -11,9 +11,10 @@ const Title = styled.h1`
   }
 `;
 
-const Loading = ({ cCode }) => {
-  const [title, setTitle] = useState("결과 분석 중");
+const Loading = ({ cCode, queryStringHash }) => {
   let history = useHistory();
+  const [title, setTitle] = useState("결과 분석 중");
+  const encodeQuery = encodeURIComponent(queryStringHash);
 
   useEffect(() => {
     const id = setTimeout(() => {
@@ -23,8 +24,8 @@ const Loading = ({ cCode }) => {
   }, [title]);
 
   useEffect(() => {
-    setTimeout(() => history.push(`/result/${cCode}`), 2700);
-  }, [history, cCode]);
+    setTimeout(() => history.push(`/result/${cCode}?${encodeQuery}`), 2700);
+  }, [history, cCode, encodeQuery]);
 
   return (
     <Container>

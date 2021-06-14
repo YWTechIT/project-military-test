@@ -17,6 +17,7 @@ const App = () => {
   const [score, setScore] = useState(DEFAULT_SCORE);
   const highScoreObj = getHighScoreObj(score.combat, score.supply);
   const cCode = getMaxValueKey(highScoreObj);
+  const queryStringHash = Object.values(highScoreObj).map((value) => {return String(value).padStart(3, 0)});
 
   return (
     <>
@@ -36,7 +37,7 @@ const App = () => {
             <Supply score={score} setScore={setScore}></Supply>
           </Route>
           <Route path="/loading">
-            <Loading cCode={cCode}/>
+            <Loading cCode={cCode} queryStringHash={queryStringHash}/>
           </Route>
           <Route path="/result/:cCode">
             <Result setScore = {setScore} highScoreObj={highScoreObj}></Result>
