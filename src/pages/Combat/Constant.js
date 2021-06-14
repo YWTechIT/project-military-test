@@ -72,24 +72,22 @@ const COMBAT_QUIZ = [
 	},
 	{
 		id: 9,
+		question: "무술을 꼭 하나 배워야한다면 당신의 선택은?",
+		answers: [
+			{ text: "상대방의 수를 읽는 검도", infantry: 0, artillery: 0, armor: 0, engineer: 0, signal: 0, intelligence: 0 },
+			{ text: "상대의 힘을 역이용 하는 유도", infantry: 0, artillery: 0, armor: 0, engineer: 0, signal: 0, intelligence: 0 },
+			{ text: "남다른 순발력이 필요한 합기도", infantry: 0, artillery: 0, armor: 0, engineer: 0, signal: 0, intelligence: 0 },
+			{ text: "상대방의 기선을 제압하는 태권도", infantry: 0, artillery: 0, armor: 0, engineer: 0, signal: 0, intelligence: 0 },
+		],
+	},
+	{
+		id: 10,
 		question: "코로나 시국이 끝나고 가장 먼저 하고 싶은 일은?",
 		answers: [
 			{ text: "해외여행 가기", infantry: 0, artillery: 0, armor: 0, engineer: 0, signal: 0, intelligence: 0 },
 			{ text: "마스크 벗고 다니기", infantry: 0, artillery: 0, armor: 0, engineer: 0, signal: 0, intelligence: 0 },
 			{ text: "유명한 가수의 콘서트 관람", infantry: 0, artillery: 0, armor: 0, engineer: 0, signal: 0, intelligence: 0 },
 			{ text: "친구들과 밤새 술 마시기", infantry: 0, artillery: 0, armor: 0, engineer: 0, signal: 0, intelligence: 0 },
-		],
-	},
-	{
-		id: 10,
-		question: "다음 중 꽤 괜찮은 문장은?",
-		answers: [
-			{ text: "나를 따르라 !", infantry: 2, artillery: 0, armor: 0, engineer: 0, signal: 0, intelligence: 0 },
-			{ text: "통하라 !", infantry: 0, artillery: 0, armor: 0, engineer: 0, signal: 2, intelligence: 0 },
-			{ text: "우레 !", infantry: 0, artillery: 2, armor: 0, engineer: 0, signal: 0, intelligence: 0 },
-			{ text: "시작과 끝은 우리가 !", infantry: 0, artillery: 0, armor: 0, engineer: 2, signal: 0, intelligence: 0 },
-			{ text: "적을 먼저 찾아라 !", infantry: 0, artillery: 0, armor: 0, engineer: 0, signal: 0, intelligence: 2 },
-			{ text: "지상의 왕자 !", infantry: 0, artillery: 0, armor: 2, engineer: 0, signal: 0, intelligence: 0 },
 		],
 	},
 ];

@@ -11,7 +11,6 @@ const Result = ({ setScore, highScoreObj }) => {
   const { cCode } = useParams();
   const decodeQuery = decodeURIComponent(window.location.search.split('?')[1]).split(',');
   const queryObj = getParseArrayToObj(decodeQuery);
-  console.log(decodeQuery)
   const queryId = getChangeParameterName(highScoreObj, queryObj);
 
   return (
