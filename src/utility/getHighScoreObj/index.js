@@ -3,6 +3,8 @@
  *
  * @ param {Object, Object}
  *
+ * @ description: combat, supply 병과 중 더 높은 점수를 얻은 obj return
+ * 
  * @ example
  *  combat = {
  *      infantry: 0,
