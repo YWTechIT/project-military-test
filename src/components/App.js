@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet';
+import favicon from '../assets/favicon.ico';
 import { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
@@ -23,6 +25,10 @@ const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
+        <Helmet>
+          <title>나와 가장 어울리는 병과는 무엇일까?</title>
+          <link rel="icon" href={favicon} />
+        </Helmet>
         <Router>
           <Route exact path="/">
             <Landing></Landing>
