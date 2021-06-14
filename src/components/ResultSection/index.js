@@ -43,6 +43,7 @@ const CardBoxWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
   width: 94%;
+  margin: 0px 10px 16px 10px;
 `;
 
 const ResultSection = ({ cCode, queryId }) => {
