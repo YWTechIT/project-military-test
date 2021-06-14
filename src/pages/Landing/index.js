@@ -4,22 +4,6 @@ import landing from "../../assets/landing.jpg";
 import Button from "../../components/Button";
 import Container from "../../components/Container";
 
-const Title = styled.h1`
-  font-size: 24px;
-  margin: 4px;
-  @media screen and (min-width: 600px){
-    font-size: 32px;
-  }
-`;
-
-const SubTitle = styled.h2`
-  font-size: 16px;
-  margin: 4px;
-  @media screen and (min-width: 600px){
-    font-size: 20px;
-  }
-`;
-
 const StyledImage = styled.img`
   border-radius: 10px;
   margin: 12px;
@@ -41,8 +25,8 @@ const Landing = () => {
   return (
     <>
       <Container>
-        <Title>내가 재입대를 하게 된다면?</Title>
-        <SubTitle>나에게 어울리는 병과는 무엇일까?</SubTitle>
+        <h1>내가 재입대를 하게 된다면?</h1>
+        <h3>나에게 어울리는 병과는 무엇일까?</h3>
         <StyledImage src={landing} alt="landing"></StyledImage>
         <Text>
           2040년 2월 16일, 병무청 서버 해킹으로 인해 입영기록이 통째로 삭제됐다. 어느날

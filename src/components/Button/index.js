@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import StyledLink from "../StyledLink";
+import StyledLink from "../../typography/styledLink";
 
 const StyledButton = styled.button`
   width: 80%;

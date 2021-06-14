@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ResultTitle from "../ResultTitle";
-import StyledLink from "../StyledLink";
+import StyledLink from "../../typography/styledLink";
 
 const CardBoxFlex = styled.div`
   display: flex;
@@ -21,6 +20,11 @@ const CardBoxImg = styled.img`
   }
 `;
 
+const CardBoxTitle = styled.h2`
+  color: ${(props) => props.theme.HashTag};
+  word-break: keep-all;
+`;
+
 const CardBoxText = styled.div`
   font-size: 16px;
   @media screen and (min-width: 600px) {
@@ -32,7 +36,7 @@ const CardBox = ({ cardBoxLink, cardBoxICON, cardBoxName, children }) => {
   return (
     <>
       <CardBoxFlex>
-        <ResultTitle>{children}</ResultTitle>
+        <CardBoxTitle>{children}</CardBoxTitle>
         <ImgContainer>
           <StyledLink to={cardBoxLink}>
             <CardBoxImg src={cardBoxICON}></CardBoxImg>
