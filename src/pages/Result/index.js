@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Container from "../../components/Container";
 import ResultSection from "../../components/ResultSection";
 import Button from "../../components/Button";
