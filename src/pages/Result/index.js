@@ -8,6 +8,7 @@ import getParseArrayToObj from "../../utility/getParseArrayToObj";
 import getChangeParameterName from "../../utility/getChangeParameterName";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import RESULT from "../../components/ResultSection/result";
+import ReactGA from 'react-ga';
 
 const Result = ({ setScore, highScoreObj }) => {
   const { cCode } = useParams();
@@ -17,6 +18,8 @@ const Result = ({ setScore, highScoreObj }) => {
   const queryObj = getParseArrayToObj(decodeQuery);
   const queryId = getChangeParameterName(highScoreObj, queryObj);
   const currentUrl = document.location.href;
+  ReactGA.initialize('UA-199545771-1');
+  ReactGA.pageview(window.location.pathname + window.location.search);
 
   return (
     <>
