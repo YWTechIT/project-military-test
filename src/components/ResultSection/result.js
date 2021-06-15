@@ -36,6 +36,9 @@ const RESULT = {
     opposite_icon: MEDIC_ICON,
     similar_link: "intelligence",
     opposite_link: "medic",
+    ogTitle: '나와 잘 맞는 병과: 보병',
+    ogDescription: '# 보병 # 최소비용 # 최대인력 # 행군',
+    ogImage: INFANTRY,
   },
   artillery: {
     title: "포병",
@@ -49,6 +52,9 @@ const RESULT = {
     opposite_icon: WEAPON_ICON,
     similar_link: "armor",
     opposite_link: "weapon",
+    ogTitle: '나와 잘 맞는 병과: 포병',
+    ogDescription: '# 포병 # 포방부 # 하나 둘 삼 준비.. 쏴!',
+    ogImage: ARTILLERY,
   },
   armor: {
     title: "기갑",
@@ -62,6 +68,9 @@ const RESULT = {
     opposite_icon: AFFAIR_ICON,
     similar_link: "artillery",
     opposite_link: "affair",
+    ogTitle: '나와 잘 맞는 병과: 기갑',
+    ogDescription: '# 기갑 # 멋 # 권총 # 왕자',
+    ogImage: ARMOR,
   },
   engineer: {
     title: "공병",
@@ -75,6 +84,9 @@ const RESULT = {
     opposite_icon: INTELLIGENCE_ICON,
     similar_link: "band",
     opposite_link: "intelligence",
+    ogTitle: '나와 잘 맞는 병과: 공병',
+    ogDescription: '# 공병 # 군대가면 철 든다 # SCV # 들엇',
+    ogImage: ENGINEER,
   },
   signal: {
     title: "통신",
@@ -88,6 +100,9 @@ const RESULT = {
     opposite_icon: POLICE_ICON,
     similar_link: "weapon",
     opposite_link: "police",
+    ogTitle: '나와 잘 맞는 병과: 통신',
+    ogDescription: '# 통신 # 훅 훅 - 하나 둘 삼 넷 # 니퍼 # 어디갔지',
+    ogImage: SIGNAL,
   },
   intelligence: {
     title: "정보",
@@ -101,6 +116,9 @@ const RESULT = {
     opposite_icon: BAND_ICON,
     similar_link: "infantry",
     opposite_link: "band",
+    ogTitle: '나와 잘 맞는 병과: 정보',
+    ogDescription: '# 정보 # 보안은 # 생명',
+    ogImage: INTELLIGENCE,
   },
   affair: {
     title: "정훈",
@@ -114,6 +132,9 @@ const RESULT = {
     opposite_icon: ARMOR_ICON,
     similar_link: "police",
     opposite_link: "armor",
+    ogTitle: '나와 잘 맞는 병과: 정훈',
+    ogDescription: '# 정훈 # 사진 촬영하겠습니다! # 파이팅 하겠습니다!',
+    ogImage: AFFAIR,
   },
   band: {
     title: "군악",
@@ -127,6 +148,9 @@ const RESULT = {
     opposite_icon: INTELLIGENCE_ICON,
     similar_link: "engineer",
     opposite_link: "intelligence",
+    ogTitle: '나와 잘 맞는 병과: 군악',
+    ogDescription: '# 군악 # 마칭밴드 # 묵념곡 # 챙',
+    ogImage: BAND,
   },
   medic: {
     title: "의무",
@@ -140,6 +164,9 @@ const RESULT = {
     opposite_icon: INFANTRY_ICON,
     similar_link: "pray",
     opposite_link: "infantry",
+    ogTitle: '나와 잘 맞는 병과: 의무',
+    ogDescription: '# 의무 # 메딕 # 앰뷸 # 살려야 한다',
+    ogImage: MEDIC,
   },
   police: {
     title: "헌병",
@@ -153,6 +180,9 @@ const RESULT = {
     opposite_icon: SIGNAL_ICON,
     similar_link: "affair",
     opposite_link: "signal",
+    ogTitle: '나와 잘 맞는 병과: 헌병',
+    ogDescription: '# 군사경찰 # 헌병 # 군기순찰 # 카리스마',
+    ogImage: POLICE,
   },
   pray: {
     title: "군종",
@@ -166,6 +196,9 @@ const RESULT = {
     opposite_icon: ENGINEER_ICON,
     similar_link: "medic",
     opposite_link: "engineer",
+    ogTitle: '나와 잘 맞는 병과: 군종',
+    ogDescription: '# 군종 # 초코파이 # 땡보',
+    ogImage: PRAY,
   },
   weapon: {
     title: "병기",
@@ -179,6 +212,9 @@ const RESULT = {
     opposite_icon: ARTILLERY_ICON,
     similar_link: "signal",
     opposite_link: "artillery",
+    ogTitle: '나와 잘 맞는 병과: 병기',
+    ogDescription: '# 병기 # 전투장비지휘검열 # 샾밴 # 수리반',
+    ogImage: WEAPON,
   },
 };
 

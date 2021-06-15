@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Description from "../Description";
 import HorizonLine from "../HorizontalLine";
 import SocialButtonGroup from "../SocialButtonGroup";
-import RESULT from "./result";
+import RESULT from "./RESULT";
 import ProgressBar from "../ProgressBar";
 import CardBox from "../CardBox";
 import PropTypes from "prop-types";
