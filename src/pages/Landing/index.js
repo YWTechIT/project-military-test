@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import favicon from "../../assets/favicon.ico";
 import landing from "../../assets/landing.jpg";
 import styled from "styled-components";
 import Button from "../../components/Button";
 import Container from "../../components/Container";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import ReactGA from 'react-ga';
+import ReactGA from "react-ga";
 
 const StyledImage = styled.img`
   border-radius: 10px;
@@ -26,8 +26,12 @@ const Text = styled.div`
 
 const Landing = () => {
   const currentUrl = document.location.href;
-  ReactGA.initialize('UA-199545771-1');
-  ReactGA.pageview(window.location.pathname + window.location.search);
+
+  useEffect(() => {
+    ReactGA.initialize("UA-199545771-1");
+    ReactGA.set({ page: window.location.pathname });
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <>
