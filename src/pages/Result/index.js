@@ -6,8 +6,8 @@ import DEFAULT_SCORE from "../../constant/DEFAULT_SCORE";
 import { useParams } from "react-router-dom";
 import getParseArrayToObj from "../../utility/getParseArrayToObj";
 import getChangeParameterName from "../../utility/getChangeParameterName";
-import RESULT from "../../components/ResultSection/RESULT";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import RESULT from "../../components/ResultSection/RESULT";
 
 const Result = ({ setScore, highScoreObj }) => {
   const { cCode } = useParams();

@@ -3,10 +3,10 @@ import styled from "styled-components";
 import Description from "../Description";
 import HorizonLine from "../HorizontalLine";
 import SocialButtonGroup from "../SocialButtonGroup";
-import RESULT from "./RESULT";
 import ProgressBar from "../ProgressBar";
 import CardBox from "../CardBox";
 import PropTypes from "prop-types";
+import RESULT from "./RESULT";
 
 const ResultTitle = styled.h1`
   margin: 20px 10px;
