@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import getParseArrayToObj from "../../utility/getParseArrayToObj";
 import getChangeParameterName from "../../utility/getChangeParameterName";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import RESULT from "../../components/ResultSection/RESULT";
+import RESULT from "../../components/ResultSection/result";
 
 const Result = ({ setScore, highScoreObj }) => {
   const { cCode } = useParams();

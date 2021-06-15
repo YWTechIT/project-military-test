@@ -6,7 +6,7 @@ import SocialButtonGroup from "../SocialButtonGroup";
 import ProgressBar from "../ProgressBar";
 import CardBox from "../CardBox";
 import PropTypes from "prop-types";
-import RESULT from "./RESULT";
+import RESULT from "./result";
 
 const ResultTitle = styled.h1`
   margin: 20px 10px;
