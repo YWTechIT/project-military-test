@@ -20,9 +20,9 @@ const SectionTitle = styled.h2`
 const StyledImage = styled.img`
   display: block;
   border-radius: 30px;
-  opacity: 90%;
+  opacity: 96%;
   margin: 0px 10px 16px 10px;
-  max-width: 90%;
+  max-width: 88%;
   @media screen and (min-width: 600px) {
     max-width: 96%;
   }

@@ -5,7 +5,7 @@ const FlexBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 32px;
+  margin: 32px;
 `;
 
 const ContainerWrapper = styled.div`
