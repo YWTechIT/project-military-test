@@ -28,9 +28,12 @@ const StyledImage = styled.img`
   }
 `;
 
-const ProgressBarWrapper = styled.div`
-  align-items: center;
+const ProgressBarsContainer = styled.div`
   width: 100%;
+`;
+
+const ProgressBarsWrapper = styled.div`
+  margin-right: 40px;
 `;
 
 const DescriptionWrapper = styled.div`
@@ -52,12 +55,14 @@ const ResultSection = ({ cCode, queryId }) => {
       <ResultTitle>나와 잘 어울리는 병과는?</ResultTitle>
       <StyledImage src={RESULT[cCode].src} />
       <HorizonLine />
-      <ProgressBarWrapper>
+      <ProgressBarsContainer>
         <SectionTitle># 나의 측정 결과</SectionTitle>
-        {Object.entries(queryId).map(([key, value], idx) => (
-          <ProgressBar key={idx} name={key} percent={value * 10} />
-        ))}
-      </ProgressBarWrapper>
+        <ProgressBarsWrapper>
+          {Object.entries(queryId).map(([key, value], idx) => (
+            <ProgressBar key={idx} name={key} percent={value * 10} />
+          ))}
+        </ProgressBarsWrapper>
+      </ProgressBarsContainer>
       <HorizonLine />
       <DescriptionWrapper>
         <Description

@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 const ProgressBarContainer = styled.div`
   display: flex;
-  text-align: center;
   margin: 12px 10px;
-  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
 `;
 
 const ProgressBarName = styled.div`
@@ -19,14 +19,12 @@ const ProgressBarName = styled.div`
 `;
 
 const GageContainer = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: center;
+  width: 75%;
 `;
 
 const Gage = styled.div`
   height: 12px;
-  width: 86%;
+  width: 100%;
   background-color: ${(props) => props.theme.ProgressBarBg};
   border-radius: 50px;
   @media screen and (min-width: 600px){
