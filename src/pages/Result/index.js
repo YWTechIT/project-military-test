@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import favicon from "../../assets/favicon.ico";
 import Container from "../../components/Container";
 import ResultSection from "../../components/ResultSection";
 import Button from "../../components/Button";
@@ -9,6 +10,13 @@ import getChangeParameterName from "../../utility/getChangeParameterName";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import RESULT from "../../components/ResultSection/result";
 import ReactGA from "react-ga";
+import styled from "styled-components";
+
+const AdvertisedBanner = styled.div`
+    text-align: center;
+    width: 100%;
+    margin: 20px 10px 0px 10px;
+  `;
 
 const Result = ({ setScore, highScoreObj }) => {
   const { cCode } = useParams();
@@ -18,7 +26,7 @@ const Result = ({ setScore, highScoreObj }) => {
   const queryObj = getParseArrayToObj(decodeQuery);
   const queryId = getChangeParameterName(highScoreObj, queryObj);
   const currentUrl = document.location.href;
-  
+
   useEffect(() => {
     ReactGA.initialize("UA-199545771-1");
     ReactGA.set({ page: window.location.pathname });
@@ -29,6 +37,8 @@ const Result = ({ setScore, highScoreObj }) => {
     <>
       <HelmetProvider>
         <Helmet>
+          <title>나와 가장 어울리는 병과는 무엇일까?</title>
+          <link rel="icon" href={favicon} />
           <meta property="og:url" content={currentUrl} />
           <meta property="og:title" content={RESULT[cCode]["ogTitle"]} />
           <meta
@@ -55,6 +65,25 @@ const Result = ({ setScore, highScoreObj }) => {
         <Button onClick={() => setScore(DEFAULT_SCORE)} to="/">
           테스트 다시하기
         </Button>
+
+        <AdvertisedBanner>
+          <iframe
+            title = 'dynamicBanner1'
+            src="https://ads-partners.coupang.com/widgets.html?id=491881&template=carousel&trackingCode=AF9262326&subId=&width=320&height=100"
+            frameBorder="0"
+            scrolling="no"
+            referrerPolicy="unsafe-url"
+            style={{maxWidth: 90 + '%'}}
+          ></iframe>
+          <iframe
+            title = 'dynamicBanner2'
+            src="https://ads-partners.coupang.com/widgets.html?id=491881&template=carousel&trackingCode=AF9262326&subId=&width=320&height=100"
+            frameBorder="0"
+            scrolling="no"
+            referrerPolicy="unsafe-url"
+            style={{maxWidth: 90 + '%'}}
+          ></iframe>
+        </AdvertisedBanner>
       </Container>
     </>
   );
