@@ -12,9 +12,9 @@ import kakaoLogo from "../../assets/kakao_logo.jpg";
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 50px);
+  grid-template-columns: repeat(4, 48px);
   justify-content: center;
-  grid-column-gap: 10px;
+  grid-column-gap: 8px;
   margin-bottom: 20px;
 `;
 
@@ -39,9 +39,6 @@ const KakaoShareButton = styled.a`
   border-radius: 24px;
   border: 0px;
   cursor: pointer;
-  &:hover {
-    background-color: black;
-  }
 `;
 
 const KakaoIcon = styled.img`
