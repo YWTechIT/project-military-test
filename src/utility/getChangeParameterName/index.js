@@ -1,35 +1,47 @@
 /*
  * Parameter detail of getChangeParameterName
  *
- * @ param {Object}
- *
+ * @ param {Object(key:value), Object(key:value)}
+ * 
+ * @ description 
+ *   1. higherObj와 queryId 동시에 받는다.
+ *   2. higherObj가 combat / supply Obj인지 확인한다.
+ *   3. assign 연산자를 이용해 queryId의 key를 의미가 없는 숫자에서 의미가 있는 변수인 한글 parameter로 바꾼다.
+ *   4. resultSection으로 props로 전송해 progressBar에 사용한다.
+ * 
  * @ example
- *  combat = {
- *      infantry: 0,
- *      artillery: 0,
- *      ...
+ *   higherObj = {
+ *      infantry: 1,
+ *      artillery: 2,
+ *      signal: 3,
+ *      .
+ *      .
+ *      .
  *  }
- *
- *  supply = {
- *      affair: 0,
- *      medic: 0,
- *  ...
+ * 
+ *  queryObj = {
+ *      0: 1,
+ *      1: 2,
+ *      2: 3,
+ *      .
+ *      .
+ *      .
  *  }
  */
 
-const getChangeParameterName = (combatOrSupplyObj) => {
-  let changeParameterName;
+const getChangeParameterName = (higherObj, queryObj) => {
+  let changeParameterKey;
 
-  if ("infantry" in combatOrSupplyObj) {
+  if ("infantry" in higherObj) {
     const {
-      infantry: 보병,
-      artillery: 포병,
-      armor: 기갑,
-      engineer: 공병,
-      signal: 통신,
-      intelligence: 정보,
-    } = { ...combatOrSupplyObj };
-    const changeCombatName = Object.assign({
+      0: 보병,
+      1: 포병,
+      2: 기갑,
+      3: 공병,
+      4: 통신,
+      5: 정보,
+    } = { ...queryObj };
+    const combatObj = Object.assign({
       보병,
       포병,
       기갑,
@@ -37,27 +49,27 @@ const getChangeParameterName = (combatOrSupplyObj) => {
       통신,
       정보,
     });
-    changeParameterName = changeCombatName;
+    changeParameterKey = combatObj;
   } else {
     const {
-      affair: 정훈,
-      band: 밴드,
-      police: 군사경찰,
-      pray: 군종,
-      weapon: 병기,
-      medic: 의무,
-    } = { ...combatOrSupplyObj };
-    const changeSupplyName = Object.assign({
+      0: 정훈,
+      1: 의무,
+      2: 병기,
+      3: 군경,
+      4: 군종,
+      5: 군악,
+    } = { ...queryObj };
+    const SupplyObj = Object.assign({
       정훈,
-      밴드,
-      군사경찰,
-      군종,
-      병기,
       의무,
+      병기,
+      군경,
+      군종,
+      군악,
     });
-    changeParameterName = changeSupplyName;
+    changeParameterKey = SupplyObj;
   }
-  return changeParameterName;
+  return changeParameterKey;
 };
 
 export default getChangeParameterName;

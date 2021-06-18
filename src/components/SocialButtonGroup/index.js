@@ -12,10 +12,10 @@ import kakaoLogo from "../../assets/kakao_logo.jpg";
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 50px);
+  grid-template-columns: repeat(4, 48px);
   justify-content: center;
-  grid-column-gap: 10px;
-  margin-bottom: 16px;
+  grid-column-gap: 8px;
+  margin-bottom: 20px;
 `;
 
 const URLShareButton = styled.button`
@@ -24,7 +24,7 @@ const URLShareButton = styled.button`
   color: white;
   border-radius: 24px;
   border: 0px;
-  font-weight: 800;
+  font-weight: bold;
   font-size: 18px;
   cursor: pointer;
   background-color: ${(props) => props.theme.primaryColor100};
@@ -33,26 +33,12 @@ const URLShareButton = styled.button`
   }
 `;
 
-// const Test = styled.div`
-//   position: absolute;
-//   z-index: 10;
-//   width: 48px;
-//   height: 48px;
-//   border-radius: 24px;
-//   border: 0px;
-// `
-
 const KakaoShareButton = styled.a`
   width: 48px;
   height: 48px;
   border-radius: 24px;
   border: 0px;
-  // font-weight: 800;
-  // font-size: 18px;
   cursor: pointer;
-  &:hover {
-    background-color: black;
-  }
 `;
 
 const KakaoIcon = styled.img`
@@ -64,14 +50,15 @@ const KakaoIcon = styled.img`
 const FlexContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
 `;
 
-const Title = styled.div`
+const Title = styled.h1`
   font-size: 20px;
   text-align: center;
-  margin-bottom: 14px;
-  font-weight: bold;
+  margin: 10px 0px 14px 0px;
+  @media screen and (min-width: 600px){
+    font-size: 24px;
+  }
 `;
 
 const SocialButtonGroup = () => {

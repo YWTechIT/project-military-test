@@ -3,6 +3,8 @@
  *
  * @ param {Object, Object}
  *
+ * @ description: combat, supply 병과 중 더 높은 점수를 얻은 obj return
+ * 
  * @ example
  *  combat = {
  *      infantry: 0,
@@ -17,19 +19,19 @@
  *  }
  */
 
-const getCurrentPage = (combat, supply) => {
+const getHighScoreObj = (combat, supply) => {
   let sum = 0;
-  let currentPage;
+  let highScore;
 
   for (let combatKeys in combat) {
     sum += combat[combatKeys];
   }
   if (sum === 0) {
-    currentPage = supply;
+    highScore = supply;
   } else {
-    currentPage = combat;
+    highScore = combat;
   }
-  return currentPage;
+  return highScore;
 };
 
-export default getCurrentPage;
+export default getHighScoreObj;

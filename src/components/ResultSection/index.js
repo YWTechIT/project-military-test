@@ -1,75 +1,101 @@
 import React from "react";
 import styled from "styled-components";
-import getChangeParameterName from "../../utility/getChangeParameterName";
 import Description from "../Description";
 import HorizonLine from "../HorizontalLine";
-import OtherInstance from "../OtherInstance";
 import SocialButtonGroup from "../SocialButtonGroup";
+import ProgressBar from "../ProgressBar";
+import CardBox from "../CardBox";
+import PropTypes from "prop-types";
 import RESULT from "./result";
-import ProgressBar from '../ProgressBar';
-import ResultTitle from "../ResultTitle";
 
-const SectionTitle = styled.h1`
-  font-size: 32px;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  text-align: center;
+const ResultTitle = styled.h1`
+  margin: 20px 10px;
+`;
+
+const SectionTitle = styled.h2`
+  color: ${(props) => props.theme.HashTag};
+  word-break: keep-all;
 `;
 
 const StyledImage = styled.img`
   display: block;
-  border-radius: 16px;
-  opacity: 90%;
-  margin-bottom: 4px;
-  max-width: 94%;
+  border-radius: 30px;
+  opacity: 96%;
+  margin: 0px 10px 16px 10px;
+  max-width: 88%;
+  @media screen and (min-width: 600px) {
+    max-width: 96%;
+  }
 `;
 
-const ProgressWrapper = styled.div`
-  align-items: center;
-  width: 80%;
-  padding-left: 50px;
-  padding-right: 50px;
+const ProgressBarsContainer = styled.div`
+  width: 100%;
+`;
+
+const ProgressBarsWrapper = styled.div`
+  margin-right: 40px;
 `;
 
 const DescriptionWrapper = styled.div`
   align-items: center;
-  width: 90%;
+  width: 86%;
+  margin: 0px 10px 16px 10px;
 `;
 
-const OtherInstanceWrapper = styled.div`
+const CardBoxWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  width: 90%;
+  justify-content: space-evenly;
+  width: 94%;
+  margin: 0px 10px 16px 10px;
 `;
 
-const ResultSection = ({ cCode, currentPage }) => {
-  const changeParameterObj = getChangeParameterName(currentPage);
-
+const ResultSection = ({ cCode, queryId }) => {
   return (
     <>
-      <SectionTitle>나와 잘 어울리는 병과는?</SectionTitle>
+      <ResultTitle>나와 잘 어울리는 병과는?</ResultTitle>
       <StyledImage src={RESULT[cCode].src} />
       <HorizonLine />
-      <ProgressWrapper>
-      <ResultTitle># 나의 측정 결과</ResultTitle>
-      {Object.entries(changeParameterObj).map((nameAndScore, idx) => (
-          <ProgressBar key={idx} name={nameAndScore[0]} percent={nameAndScore[1] * 10} />
-      ))}
-      </ProgressWrapper>
+      <ProgressBarsContainer>
+        <SectionTitle># 나의 측정 결과</SectionTitle>
+        <ProgressBarsWrapper>
+          {Object.entries(queryId).map(([key, value], idx) => (
+            <ProgressBar key={idx} name={key} percent={value * 10} />
+          ))}
+        </ProgressBarsWrapper>
+      </ProgressBarsContainer>
       <HorizonLine />
       <DescriptionWrapper>
-        <Description descriptionTitle={RESULT[cCode].hashTag} descriptionText={RESULT[cCode].description}></Description>
+        <Description
+          descriptionTitle={RESULT[cCode].hashTag}
+          descriptionText={RESULT[cCode].description}
+        ></Description>
       </DescriptionWrapper>
       <HorizonLine />
-      <OtherInstanceWrapper>
-        <OtherInstance otherInstanceLink= {RESULT[cCode].similar_link} otherInstanceICON = {RESULT[cCode].similar_icon} otherInstanceName = {RESULT[cCode].similar_name}># 나와 비슷한 병과</OtherInstance>
-        <OtherInstance otherInstanceLink = {RESULT[cCode].opposite_link} otherInstanceICON = {RESULT[cCode].opposite_icon} otherInstanceName = {RESULT[cCode].opposite_name}># 나와 반대인 병과</OtherInstance>
-      </OtherInstanceWrapper>
+      <CardBoxWrapper>
+        <CardBox
+          cardBoxLink={RESULT[cCode].similar_link}
+          cardBoxICON={RESULT[cCode].similar_icon}
+          cardBoxName={RESULT[cCode].similar_name}
+        >
+          # 나와 비슷한 병과
+        </CardBox>
+        <CardBox
+          cardBoxLink={RESULT[cCode].opposite_link}
+          cardBoxICON={RESULT[cCode].opposite_icon}
+          cardBoxName={RESULT[cCode].opposite_name}
+        >
+          # 나와 반대인 병과
+        </CardBox>
+      </CardBoxWrapper>
       <HorizonLine />
       <SocialButtonGroup />
     </>
   );
+};
+
+ResultSection.propTypes = {
+  cCode: PropTypes.string.isRequired,
+  queryId: PropTypes.object.isRequired,
 };
 
 export default ResultSection;

@@ -3,6 +3,8 @@
  *
  * @ param {Object}
  *
+ * @ description: 제일 높은 점수를 획득한 병과를 return하기 위한 함수.
+ * 
  * @ example
  *  combat = {
  *      infantry: 0,

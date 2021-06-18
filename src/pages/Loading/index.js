@@ -5,16 +5,16 @@ import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 
 const Title = styled.h1`
-  font-size: 64px;
-  font-weight: bold;
-  margin: 8px;
-  margin-bottom: 96px;
-  text-align: center;
+  font-size: 48px;
+  @media screen and (min-width: 600px){
+    font-size: 54px;
+  }
 `;
 
-const Loading = ({ cCode }) => {
-  const [title, setTitle] = useState("결과 분석 중");
+const Loading = ({ cCode, queryStringHash }) => {
   let history = useHistory();
+  const [title, setTitle] = useState("결과 분석 중");
+  const encodeQuery = encodeURIComponent(queryStringHash);
 
   useEffect(() => {
     const id = setTimeout(() => {
@@ -24,8 +24,8 @@ const Loading = ({ cCode }) => {
   }, [title]);
 
   useEffect(() => {
-    setTimeout(() => history.push(`/result/${cCode}`), 2700);
-  }, [history, cCode]);
+    setTimeout(() => history.push(`/result/${cCode}?${encodeQuery}`), 2700);
+  }, [history, cCode, encodeQuery]);
 
   return (
     <Container>

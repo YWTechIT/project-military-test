@@ -1,30 +1,35 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from 'prop-types';
 
 const ProgressBarContainer = styled.div`
   display: flex;
+  margin: 12px 10px;
   text-align: center;
-  margin: 10px 0px;
-  box-sizing: border-box;
-  min-width: 0px;
+  align-items: center;
 `;
 
-const ProgressName = styled.div`
+const ProgressBarName = styled.div`
   width: 25%;
+  font-weight: bold;
+  margin-left: 14px;
+  @media screen and (min-width: 600px){
+    font-size: 18px;
+  }
 `;
 
 const GageContainer = styled.div`
-  display: flex;
   width: 75%;
-  align-items: center;
-  margin: 0px 30px;
 `;
 
 const Gage = styled.div`
-  height: 10px;
+  height: 12px;
   width: 100%;
-  background-color: lightgray;
+  background-color: ${(props) => props.theme.ProgressBarBg};
   border-radius: 50px;
+  @media screen and (min-width: 600px){
+    height: 16px;
+  }
 `;
 
 const GageFiller = styled.div`
@@ -39,7 +44,7 @@ const ProgressBar = (props) => {
 
   return (
     <ProgressBarContainer>
-      <ProgressName>{name}</ProgressName>
+      <ProgressBarName>{name}</ProgressBarName>
       <GageContainer>
         <Gage>
           <GageFiller percent={percent} />
@@ -48,5 +53,10 @@ const ProgressBar = (props) => {
     </ProgressBarContainer>
   );
 };
+
+ProgressBar.propTypes = {
+  name: PropTypes.string.isRequired,
+  percent: PropTypes.number.isRequired
+}
 
 export default ProgressBar;
