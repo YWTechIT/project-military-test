@@ -26,7 +26,7 @@ const UrlButtonWrapper = styled.div`
 `;
 
 const URLShareButton = styled.button`
-  width: 100%;
+  width: 80%;
   align-items: center;
   justify-content: center;
   height: 48px;
