@@ -12,10 +12,10 @@ import kakaoLogo from "../../assets/kakao_logo.jpg";
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 50px);
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 12px;
   margin-bottom: 20px;
-  overflow: visible;
+  justify-items: center;
 `;
 
 const URLShareButton = styled.button`
