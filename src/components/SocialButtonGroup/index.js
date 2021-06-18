@@ -30,7 +30,7 @@ const URLShareButton = styled.button`
   font-weight: bold;
   font-size: 15px;
   cursor: pointer;
-  text-align: center;
+  text-align: left;
   background-color: ${(props) => props.theme.primaryColor100};
   &:hover {
     background-color: ${(props) => props.theme.primaryColor80};
