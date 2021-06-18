@@ -47,9 +47,8 @@ const KakaoIcon = styled.img`
   border-radius: 24px;
 `;
 
-const FlexContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+const GroupContainer = styled.div`
+  align-content: center;
 `;
 
 const Title = styled.h1`
@@ -65,7 +64,8 @@ const SocialButtonGroup = () => {
   const status = useScript("https://developers.kakao.com/sdk/js/kakao.js");
   const currentUrl = window.location.href;
   const initUrl = "https://ywtechmilitarytest.site";
-  const imageUrl = "https://ywtechmilitarytest.site/static/media/landing.73faa41f.jpg"
+  const imageUrl =
+    "https://ywtechmilitarytest.site/static/media/landing.73faa41f.jpg";
   const kakao = window.Kakao;
 
   const handleKakaoButton = () => {
@@ -101,7 +101,7 @@ const SocialButtonGroup = () => {
   }, [status, kakao]);
 
   return (
-    <FlexContainer>
+    <GroupContainer>
       <Title>결과 공유하기</Title>
       <GridContainer>
         <CopyToClipboard text={currentUrl}>
@@ -117,7 +117,7 @@ const SocialButtonGroup = () => {
           <LineIcon size={48} round={true} borderRadius={24}></LineIcon>
         </LineShareButton>
       </GridContainer>
-    </FlexContainer>
+    </GroupContainer>
   );
 };
 

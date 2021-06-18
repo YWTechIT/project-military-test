@@ -14,6 +14,7 @@ const ImgContainer = styled.div`
 `;
 
 const CardBoxImg = styled.img`
+  width: 40%;
   margin: 12px 0px;
   @media screen and (min-width: 600px) {
     width: 50%;
