@@ -21,7 +21,7 @@ const GridContainer = styled.div`
 `;
 
 const URLShareButton = styled.button`
-  width: 90%;
+  width: 84%;
   height: 48px;
   color: white;
   border-radius: 100%;
@@ -35,6 +35,8 @@ const URLShareButton = styled.button`
   }
   @media screen and (min-width: 600px) {
     width: 100%;
+    font-size: 16px;
+    border-radius: 24px;
   }
 `;
 
