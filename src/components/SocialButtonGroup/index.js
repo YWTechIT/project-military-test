@@ -21,7 +21,7 @@ const GridContainer = styled.div`
 `;
 
 const URLShareButton = styled.button`
-  width: 48px;
+  width: 100%;
   height: 48px;
   color: white;
   border-radius: 20px;
@@ -36,7 +36,6 @@ const URLShareButton = styled.button`
 `;
 
 const TempText = styled.div`
-  text-align: center;
 `;
 
 const KakaoShareButton = styled.a`
