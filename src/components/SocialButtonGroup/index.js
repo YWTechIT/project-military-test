@@ -10,6 +10,9 @@ import {
 import { useEffect } from "react";
 import kakaoLogo from "../../assets/kakao_logo.jpg";
 
+const GroupContainer = styled.div`
+`;
+
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -22,13 +25,11 @@ const URLShareButton = styled.button`
   width: 48px;
   height: 48px;
   color: white;
-  border-radius: 24px;
+  border-radius: 40px;
   border: 0px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
-  text-align: start;
-  align-items: start;
   background-color: ${(props) => props.theme.primaryColor100};
   &:hover {
     background-color: ${(props) => props.theme.primaryColor80};
@@ -47,10 +48,6 @@ const KakaoIcon = styled.img`
   width: 48px;
   height: 48px;
   border-radius: 24px;
-`;
-
-const GroupContainer = styled.div`
-  align-content: center;
 `;
 
 const Title = styled.h1`
