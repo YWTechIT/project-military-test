@@ -25,7 +25,6 @@ const UrlButtonWrapper = styled.div`
   height: 48px;
   display: flex;
   border-radius: 100%;
-  padding-right: 12px;
 `;
 
 const URLShareButton = styled.button`
@@ -37,7 +36,6 @@ const URLShareButton = styled.button`
   font-weight: bold;
   font-size: 14px;
   cursor: pointer;
-  padding-right: 12px;
   background-color: ${(props) => props.theme.primaryColor100};
   &:hover {
     background-color: ${(props) => props.theme.primaryColor80};
