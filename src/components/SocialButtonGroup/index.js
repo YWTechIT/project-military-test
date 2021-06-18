@@ -12,10 +12,10 @@ import kakaoLogo from "../../assets/kakao_logo.jpg";
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 48px);
-  justify-content: center;
-  grid-column-gap: 8px;
+  grid-template-columns: repeat(4, 50px);
+  grid-column-gap: 12px;
   margin-bottom: 20px;
+  overflow: visible;
 `;
 
 const URLShareButton = styled.button`
@@ -62,18 +62,19 @@ const Title = styled.h1`
 `;
 
 const SocialButtonGroup = () => {
-  const currentUrl = window.location.href;
-  const url = 'https://ywtechmilitarytest.site/';
   const status = useScript("https://developers.kakao.com/sdk/js/kakao.js");
+  const currentUrl = window.location.href;
+  const initUrl = "https://ywtechmilitarytest.site";
+  const imageUrl = "https://ywtechmilitarytest.site/static/media/landing.73faa41f.jpg"
   const kakao = window.Kakao;
 
   const handleKakaoButton = () => {
     kakao.Link.sendDefault({
-      objectType: "feed", // 메시지 형식 : 피드 타입
+      objectType: "feed",
       content: {
-        title: "내가 재입대를 하게 된다면..",
-        description: "나와 가장 잘 어울리는 병과는?",
-        imageUrl: "이미지 주소", // 메인으로 보여질 이미지 주소
+        title: "병무청 서버 해킹으로 입영기록이 사라졌다.. 😅 😅",
+        description: "나는 어떤 병과를 갈까?",
+        imageUrl: imageUrl,
         link: {
           webUrl: currentUrl,
           mobileWebUrl: currentUrl,
@@ -81,10 +82,10 @@ const SocialButtonGroup = () => {
       },
       buttons: [
         {
-          title: "나도 테스트 해보기", // 버튼 이름
+          title: "나도 테스트 해보기",
           link: {
-            webUrl: url,
-            mobileWebUrl: url,
+            webUrl: initUrl,
+            mobileWebUrl: initUrl,
           },
         },
       ],
@@ -98,7 +99,6 @@ const SocialButtonGroup = () => {
       }
     }
   }, [status, kakao]);
-  
 
   return (
     <FlexContainer>
