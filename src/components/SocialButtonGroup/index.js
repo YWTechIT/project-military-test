@@ -21,7 +21,7 @@ const GridContainer = styled.div`
 `;
 
 const URLShareButton = styled.button`
-  width: 100%;
+  width: 88%;
   height: 48px;
   color: white;
   border-radius: 22px;
