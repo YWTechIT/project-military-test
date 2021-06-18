@@ -25,11 +25,12 @@ const URLShareButton = styled.button`
   width: 48px;
   height: 48px;
   color: white;
-  border-radius: 40px;
+  border-radius: 24px;
   border: 0px;
   font-weight: bold;
   font-size: 15px;
   cursor: pointer;
+  text-align: center;
   background-color: ${(props) => props.theme.primaryColor100};
   &:hover {
     background-color: ${(props) => props.theme.primaryColor80};
