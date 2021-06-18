@@ -21,17 +21,17 @@ const GridContainer = styled.div`
 `;
 
 const UrlButtonWrapper = styled.div`
-  width: 100%;
+  width: 48px;
+  height: 48px;
   display: flex;
+  border-radius: 100%;
 `;
 
 const URLShareButton = styled.button`
-  width: 86%;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   height: 48px;
   color: white;
-  border-radius: 22px;
+  border-radius: 24px;
   border: 0px;
   font-weight: bold;
   font-size: 14px;
@@ -41,6 +41,7 @@ const URLShareButton = styled.button`
     background-color: ${(props) => props.theme.primaryColor80};
   }
   @media screen and (min-width: 600px) {
+    width: 100%;
     font-size: 16px;
     border-radius: 24px;
   }
