@@ -20,11 +20,18 @@ const GridContainer = styled.div`
   justify-items: center;
 `;
 
+const UrlButtonWrapper = styled.div`
+  width: 100%;
+  display: flex;
+`;
+
 const URLShareButton = styled.button`
-  width: 88%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
   height: 48px;
   color: white;
-  border-radius: 22px;
+  border-radius: 24px;
   border: 0px;
   font-weight: bold;
   font-size: 14px;
@@ -39,9 +46,7 @@ const URLShareButton = styled.button`
   }
 `;
 
-const TempText = styled.div`
-  width: 100%;
-`;
+
 
 const KakaoShareButton = styled.a`
   width: 48px;
@@ -111,9 +116,9 @@ const SocialButtonGroup = () => {
       <Title>결과 공유하기</Title>
       <GridContainer>
         <CopyToClipboard text={currentUrl}>
-          <URLShareButton>
-            <TempText>URL</TempText>
-          </URLShareButton>
+          <UrlButtonWrapper>
+            <URLShareButton>URL</URLShareButton>
+          </UrlButtonWrapper>
         </CopyToClipboard>
         <KakaoShareButton onClick={handleKakaoButton}>
           <KakaoIcon src={kakaoLogo}></KakaoIcon>
