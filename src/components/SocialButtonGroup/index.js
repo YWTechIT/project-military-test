@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useScript } from "../../hooks";
 import {
   FacebookShareButton,
@@ -9,44 +8,40 @@ import {
 } from "react-share";
 import { useEffect } from "react";
 import kakaoLogo from "../../assets/kakao_logo.jpg";
+import URLIconImg from '../../assets/URLIcon.jpg'
 
 const GroupContainer = styled.div``;
+
+const Title = styled.h1`
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 0px 14px 0px;
+  @media screen and (min-width: 600px) {
+    font-size: 24px;
+  }
+`;
 
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 12px;
+  grid-column-gap: 14px;
   margin-bottom: 20px;
   justify-items: center;
 `;
 
-const UrlButtonWrapper = styled.div`
+const URLShareButton = styled.a`
   width: 48px;
   height: 48px;
-  display: flex;
-  border-radius: 100%;
-`;
-
-const URLShareButton = styled.button`
-  width: inherit;
-  height: inherit;
-  color: white;
   border-radius: 22px;
   border: 0px;
-  font-weight: bold;
-  font-size: 14px;
   cursor: pointer;
-  background-color: ${(props) => props.theme.primaryColor100};
-  &:hover {
-    background-color: ${(props) => props.theme.primaryColor80};
-  }
-  @media screen and (min-width: 600px) {
-    font-size: 16px;
-    border-radius: 22px;
-  }
 `;
 
-
+const URLIcon = styled.img`
+  width: 48px;
+  height: 48px;
+  border-radius: 22px;
+`
 
 const KakaoShareButton = styled.a`
   width: 48px;
@@ -60,15 +55,6 @@ const KakaoIcon = styled.img`
   width: 48px;
   height: 48px;
   border-radius: 22px;
-`;
-
-const Title = styled.h1`
-  font-size: 20px;
-  text-align: center;
-  margin: 10px 0px 14px 0px;
-  @media screen and (min-width: 600px) {
-    font-size: 24px;
-  }
 `;
 
 const SocialButtonGroup = () => {
@@ -115,11 +101,9 @@ const SocialButtonGroup = () => {
     <GroupContainer>
       <Title>결과 공유하기</Title>
       <GridContainer>
-        <CopyToClipboard text={currentUrl}>
-          <UrlButtonWrapper>
-            <URLShareButton>URL</URLShareButton>
-          </UrlButtonWrapper>
-        </CopyToClipboard>
+        <URLShareButton>
+          <URLIcon src={URLIconImg}></URLIcon>
+        </URLShareButton>
         <KakaoShareButton onClick={handleKakaoButton}>
           <KakaoIcon src={kakaoLogo}></KakaoIcon>
         </KakaoShareButton>
