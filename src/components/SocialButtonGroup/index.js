@@ -21,10 +21,10 @@ const GridContainer = styled.div`
 `;
 
 const URLShareButton = styled.button`
-  width: 100%;
+  width: 90%;
   height: 48px;
   color: white;
-  border-radius: 24px;
+  border-radius: 100%;
   border: 0px;
   font-weight: bold;
   font-size: 14px;
@@ -33,9 +33,13 @@ const URLShareButton = styled.button`
   &:hover {
     background-color: ${(props) => props.theme.primaryColor80};
   }
+  @media screen and (min-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const TempText = styled.div`
+  width: 100%;
 `;
 
 const KakaoShareButton = styled.a`
