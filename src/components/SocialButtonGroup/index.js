@@ -24,7 +24,7 @@ const URLShareButton = styled.button`
   width: 100%;
   height: 48px;
   color: white;
-  border-radius: 20px;
+  border-radius: 24px;
   border: 0px;
   font-weight: bold;
   font-size: 14px;
