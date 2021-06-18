@@ -56,26 +56,49 @@ const Title = styled.h1`
   font-size: 20px;
   text-align: center;
   margin: 10px 0px 14px 0px;
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 600px) {
     font-size: 24px;
   }
 `;
 
 const SocialButtonGroup = () => {
   const currentUrl = window.location.href;
+  const url = 'https://ywtechmilitarytest.site/';
   const status = useScript("https://developers.kakao.com/sdk/js/kakao.js");
+  const kakao = window.Kakao;
+
   const handleKakaoButton = () => {
-    window.Kakao.Link.sendScrap({
-      requestUrl: currentUrl,
+    kakao.Link.sendDefault({
+      objectType: "feed", // 메시지 형식 : 피드 타입
+      content: {
+        title: "내가 재입대를 하게 된다면..",
+        description: "나와 가장 잘 어울리는 병과는?",
+        imageUrl: "이미지 주소", // 메인으로 보여질 이미지 주소
+        link: {
+          webUrl: currentUrl,
+          mobileWebUrl: currentUrl,
+        },
+      },
+      buttons: [
+        {
+          title: "나도 테스트 해보기", // 버튼 이름
+          link: {
+            webUrl: url,
+            mobileWebUrl: url,
+          },
+        },
+      ],
     });
   };
+
   useEffect(() => {
-    if (status === "ready" && window.Kakao) {
-      if (!window.Kakao.isInitialized()) {
-        window.Kakao.init("2ca911f4d06608b5899e39f80a083215");
+    if (status === "ready" && kakao) {
+      if (!kakao.isInitialized()) {
+        kakao.init("2ca911f4d06608b5899e39f80a083215");
       }
     }
-  }, [status]);
+  }, [status, kakao]);
+  
 
   return (
     <FlexContainer>
