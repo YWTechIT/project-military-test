@@ -26,12 +26,12 @@ const UrlButtonWrapper = styled.div`
 `;
 
 const URLShareButton = styled.button`
-  width: 80%;
+  width: 86%;
   align-items: center;
   justify-content: center;
   height: 48px;
   color: white;
-  border-radius: 24px;
+  border-radius: 22px;
   border: 0px;
   font-weight: bold;
   font-size: 14px;
