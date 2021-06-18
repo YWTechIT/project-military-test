@@ -37,30 +37,30 @@ const Landing = () => {
     <>
       <HelmetProvider>
         <Helmet>
-          <title>나와 가장 어울리는 병과는 무엇일까?</title>
+          <title>병과 성향 테스트</title>
           <link rel="icon" href={favicon} />
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
 
           <meta property="og:url" content={currentUrl} />
-          <meta property="og:title" content="병과 테스트 하기" />
+          <meta property="og:title" content="병과 성향 테스트 하기" />
           <meta
             property="og:description"
-            content="내가 재입대를 하게 된다면 나와 맞는 병과는 무엇일까?"
+            content="내가 재입대를 하게 된다면 나와 잘 어울리는 병과는 무엇일까?"
           />
           <meta property="og:image" content={landing} />
 
-          <meta property="twitter:title" content="병과 테스트 하기" />
+          <meta property="twitter:title" content="병과 성향 테스트 하기" />
           <meta
             property="twitter:description"
-            content="내가 재입대를 하게 된다면 나와 맞는 병과는 무엇일까?"
+            content="내가 재입대를 하게 된다면 나와 잘 어울리는 병과는 무엇일까?"
           />
           <meta property="twitter:image" content={landing} />
         </Helmet>
       </HelmetProvider>
       <Container>
-        <h1>내가 재입대를 하게 된다면?</h1>
-        <h3>나에게 어울리는 병과는 무엇일까?</h3>
+        <h1>병과 성향 테스트</h1>
+        <h3>나와 잘 어울리는 병과는 무엇일까?</h3>
         <StyledImage src={landing} alt="landing"></StyledImage>
         <Text>
           2040년 2월 16일, 병무청 서버 해킹으로 인해 입영기록이 통째로 삭제됐다.
