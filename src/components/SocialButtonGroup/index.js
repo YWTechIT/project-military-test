@@ -28,22 +28,22 @@ const UrlButtonWrapper = styled.div`
 `;
 
 const URLShareButton = styled.button`
-  width: 100%;
-  height: 48px;
+  width: inherit;
+  height: inherit;
   color: white;
-  border-radius: 24px;
+  border-radius: 22px;
   border: 0px;
   font-weight: bold;
   font-size: 14px;
   cursor: pointer;
+  padding-right: 10px;
   background-color: ${(props) => props.theme.primaryColor100};
   &:hover {
     background-color: ${(props) => props.theme.primaryColor80};
   }
   @media screen and (min-width: 600px) {
-    width: 100%;
     font-size: 16px;
-    border-radius: 24px;
+    border-radius: 22px;
   }
 `;
 
