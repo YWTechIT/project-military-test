@@ -10,8 +10,7 @@ import {
 import { useEffect } from "react";
 import kakaoLogo from "../../assets/kakao_logo.jpg";
 
-const GroupContainer = styled.div`
-`;
+const GroupContainer = styled.div``;
 
 const GridContainer = styled.div`
   display: grid;
@@ -25,22 +24,25 @@ const URLShareButton = styled.button`
   width: 48px;
   height: 48px;
   color: white;
-  border-radius: 24px;
+  border-radius: 20px;
   border: 0px;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 14px;
   cursor: pointer;
-  text-align: left;
   background-color: ${(props) => props.theme.primaryColor100};
   &:hover {
     background-color: ${(props) => props.theme.primaryColor80};
   }
 `;
 
+const TempText = styled.div`
+  text-align: center;
+`;
+
 const KakaoShareButton = styled.a`
   width: 48px;
   height: 48px;
-  border-radius: 24px;
+  border-radius: 22px;
   border: 0px;
   cursor: pointer;
 `;
@@ -48,7 +50,7 @@ const KakaoShareButton = styled.a`
 const KakaoIcon = styled.img`
   width: 48px;
   height: 48px;
-  border-radius: 24px;
+  border-radius: 22px;
 `;
 
 const Title = styled.h1`
@@ -105,16 +107,18 @@ const SocialButtonGroup = () => {
       <Title>결과 공유하기</Title>
       <GridContainer>
         <CopyToClipboard text={currentUrl}>
-          <URLShareButton>URL</URLShareButton>
+          <URLShareButton>
+            <TempText>URL</TempText>
+          </URLShareButton>
         </CopyToClipboard>
         <KakaoShareButton onClick={handleKakaoButton}>
           <KakaoIcon src={kakaoLogo}></KakaoIcon>
         </KakaoShareButton>
         <FacebookShareButton url={currentUrl}>
-          <FacebookIcon size={48} round={true} borderRadius={24}></FacebookIcon>
+          <FacebookIcon size={48} round={true} borderRadius={22}></FacebookIcon>
         </FacebookShareButton>
         <LineShareButton url={currentUrl}>
-          <LineIcon size={48} round={true} borderRadius={24}></LineIcon>
+          <LineIcon size={48} round={true} borderRadius={22}></LineIcon>
         </LineShareButton>
       </GridContainer>
     </GroupContainer>
