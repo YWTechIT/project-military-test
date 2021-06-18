@@ -2,14 +2,14 @@
 const CATEGORIZE_QUIZ = [
 	{
 		id: 1,
-		question: "친구들과 5:5 LOL을 하기로 했다. 내가 선택하고 싶은 라인은? (실력은 동일)",
+		question: "조별과제 중 첫눈에 반한 이성이 있을 때 당신의 선택은?",
 		answers: [
-			{ text: "탑", combat: 2, supply: 0 },
-			{ text: "정글", combat: 1, supply: 1 },
-			{ text: "미드", combat: 1, supply: 1 },
-			{ text: "원딜", combat: 1, supply: 1 },
-			{ text: "서폿", combat: 0, supply: 2 },
+			{ text: "그(그녀)의 번호를 물어본다.", combat: 2, supply: 0 },
+			{ text: "이성의 SNS를 들어가본다.", combat: 0, supply: 2 },
+			{ text: "내 주변에 그(그녀)와 아는사람이 있는지 물어본다.", combat: 1, supply: 1},
+			{ text: "인연이라면 언젠간 또 보겠지하며 무심코 지나간다.", combat: 1, supply: 1},
 		],
+		
 	},
 	{
 		id: 2,
@@ -21,12 +21,12 @@ const CATEGORIZE_QUIZ = [
 	},
 	{
 		id: 3,
-		question: "조별과제 중 첫눈에 반한 이성이 있을 때 당신의 행동은?",
+		question: "메이플스토리에서 드디어 1차 전직을 할 수 있다! 어떤 직업을 선택할까? ",
 		answers: [
-			{ text: "그(그녀)의 번호를 물어본다.", combat: 2, supply: 0 },
-			{ text: "이성의 SNS를 들어가본다.", combat: 0, supply: 2 },
-			{ text: "내 주변에 그(그녀)와 아는사람이 있는지 물어본다.", combat: 1, supply: 1},
-			{ text: "인연이라면 언젠간 또 보겠지하며 무심코 지나간다.", combat: 1, supply: 1},
+			{ text: "전사", combat: 2, supply: 0 },
+			{ text: "궁수", combat: 1, supply: 1 },
+			{ text: "도적", combat: 1, supply: 1 },
+			{ text: "마법사", combat: 0, supply: 2 },
 		],
 	},
 	{
