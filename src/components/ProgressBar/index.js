@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import PropTypes from 'prop-types';
+import styled, { keyframes } from "styled-components";
+import PropTypes from "prop-types";
 
 const ProgressBarContainer = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ const ProgressBarName = styled.div`
   width: 25%;
   font-weight: bold;
   margin-left: 14px;
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 600px) {
     font-size: 18px;
   }
 `;
@@ -27,9 +27,19 @@ const Gage = styled.div`
   width: 100%;
   background-color: ${(props) => props.theme.ProgressBarBg};
   border-radius: 50px;
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 600px) {
     height: 16px;
   }
+`;
+
+const fadeIn = keyframes`
+0% {
+  width: 0%;
+}
+
+100% {
+  width: ${(props) => props.percent}%;
+}
 `;
 
 const GageFiller = styled.div`
@@ -37,6 +47,8 @@ const GageFiller = styled.div`
   width: ${(props) => props.percent}%;
   background-color: #04a686;
   border-radius: inherit;
+  animation-duration: 1.3s;
+  animation-name: ${fadeIn};
 `;
 
 const ProgressBar = (props) => {
@@ -56,7 +68,7 @@ const ProgressBar = (props) => {
 
 ProgressBar.propTypes = {
   name: PropTypes.string.isRequired,
-  percent: PropTypes.number.isRequired
-}
+  percent: PropTypes.number.isRequired,
+};
 
 export default ProgressBar;
