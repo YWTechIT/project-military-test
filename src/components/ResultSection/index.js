@@ -7,6 +7,7 @@ import ProgressBar from "../ProgressBar";
 import CardBox from "../CardBox";
 import PropTypes from "prop-types";
 import RESULT from "./result";
+import getLimitExceedScore from '../../utility/getLimitExceedScore';
 
 const ResultTitle = styled.h1`
   margin: 20px 10px;
@@ -59,7 +60,7 @@ const ResultSection = ({ cCode, queryId }) => {
         <SectionTitle># 나의 측정 결과</SectionTitle>
         <ProgressBarsWrapper>
           {Object.entries(queryId).map(([key, value], idx) => (
-            <ProgressBar key={idx} name={key} percent={value * 10} />
+            <ProgressBar key={idx} name={key} percent={getLimitExceedScore(value)} />
           ))}
         </ProgressBarsWrapper>
       </ProgressBarsContainer>
