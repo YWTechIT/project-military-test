@@ -10,9 +10,12 @@
 
 <img alt="JS" src ="https://img.shields.io/badge/-javascript-F7DF1E?logo=javascript&logoColor=black&style=square"/>
 
+<img alt="styledComponents" src ="https://img.shields.io/badge/-styledComponents-DB7093?logo=styledComponents&logoColor=black&style=square"/>
+
 <img alt="Netlify" src ="https://img.shields.io/badge/-netlify-00C7B7?logo=netlify&logoColor=black&style=square"/>
 
 <img alt="GoogleAnalytics" src ="https://img.shields.io/badge/-googleAnalytics-E37400?logo=googleAnalytics&logoColor=black&style=square"/>
+
 
 <img alt='repo size' src='https://img.shields.io/github/repo-size/YWTechIT/second_refactory_military_service?style=square'/>
 
