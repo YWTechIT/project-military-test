@@ -1,4 +1,5 @@
 ## ❏ Project: 병과 성향 테스트
+Plz try military test in my <a href='https://ywtechmilitarytest.site/'>website</a> :)
 
 ## ❏ Preview
 
@@ -16,14 +17,11 @@
 
 <img alt="GoogleAnalytics" src ="https://img.shields.io/badge/-googleAnalytics-E37400?logo=googleAnalytics&logoColor=black&style=square"/>
 
-
 <img alt='repo size' src='https://img.shields.io/github/repo-size/YWTechIT/second_refactory_military_service?style=square'/>
 
 <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/YWTechIT/second_refactory_military_service?style=square">
 
 <img alt="GitHub code size in bytes" src="https://img.shields.io/badge/period-21.5.2. ~ 6.23.-blue?style=square">
-
-Plz try military test in my <a href='https://ywtechmilitarytest.site/'>website</a> :)
 
 ## ❏ Introduce
 1. 자신과 잘 맞는 병과를 재미로 찾아 볼 수 있는 개인 토이프로젝트입니다.
