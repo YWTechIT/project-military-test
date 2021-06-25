@@ -4,12 +4,11 @@
 
 ## ❏ Preview
 
-<center><img src='https://images.velog.io/images/abcd8637/post/e4bfc1ab-53e8-4ffe-82b3-89cefb0b9cf7/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-06-21%2021.32.50.png' width='300' height= '600'></center>
+<img src='https://images.velog.io/images/abcd8637/post/e4bfc1ab-53e8-4ffe-82b3-89cefb0b9cf7/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-06-21%2021.32.50.png' width='300' height= '600'>
 
 ---
 ## ❏ Stacks
 
-<center>
 <img alt="ReactJS" src ="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=black&style=square"/>
 
 <img alt="JS" src ="https://img.shields.io/badge/-javascript-F7DF1E?logo=javascript&logoColor=black&style=square"/>
@@ -24,7 +23,7 @@
 
 <img alt="GitHub code size in bytes" src="https://img.shields.io/badge/period-21.5.2. ~ 6.23.-blue?style=square">
 
-Plz try military test in my <a href='https://ywtechmilitarytest.site/'>website</a> :)</center>
+Plz try military test in my <a href='https://ywtechmilitarytest.site/'>website</a> :)
 
 ---
 ## ❏ Introduce
