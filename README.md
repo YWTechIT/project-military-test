@@ -1,4 +1,4 @@
-## <p align='center'> 병과 성향 테스트 </p>
+## ❏ Project: 병과 성향 테스트
 
 ---
 
@@ -26,6 +26,9 @@ Plz try military test in my <a href='https://ywtechmilitarytest.site/'>website</
 
 ---
 ## ❏ Introduce
-1. 자신과 잘 맞는 병과를 재미로 찾아 볼 수 있는 테스트입니다.
-2. 퀴즈 결과를 개인화 시킬 수 있습니다. (`use URL QueryString`)
+1. 자신과 잘 맞는 병과를 재미로 찾아 볼 수 있는 개인 토이프로젝트입니다.
+2. 테스트 결과를 고객마다 개인화 시킬 수 있습니다. (`use URL QueryString`)
 3. `dynamic open graph`을 사용하여 각 결과마다 다른 공유 화면을 볼 수 있습니다.
+4. 테스트 결과 경우의 수는 12가지 입니다.
+5. 카카오톡, 트위터, 페이스북에 공유하기 버튼을 통해 게시물 작성이 가능합니다.
+6. 나와 비슷하거나 반대되는 병과를 확인 할 수 있습니다.
