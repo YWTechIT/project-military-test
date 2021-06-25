@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+## <p align='center'> 병과 성향 테스트 </p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+<center>
+<img alt="ReactJS" src ="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=black&style=square"/>
 
-In the project directory, you can run:
+<img alt="JS" src ="https://img.shields.io/badge/-javascript-F7DF1E?logo=javascript&logoColor=black&style=square"/>
 
-### `yarn start`
+<img alt="Netlify" src ="https://img.shields.io/badge/-netlify-00C7B7?logo=netlify&logoColor=black&style=square"/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img alt="GoogleAnalytics" src ="https://img.shields.io/badge/-googleAnalytics-E37400?logo=googleAnalytics&logoColor=black&style=square"/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<img alt='repo size' src='https://img.shields.io/github/repo-size/YWTechIT/second_refactory_military_service?style=square'/>
 
-### `yarn test`
+<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/YWTechIT/second_refactory_military_service?style=square">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img alt="GitHub code size in bytes" src="https://img.shields.io/badge/period-21.5.2. ~ 6.23.-blue?style=square">
 
-### `yarn build`
+Plz try military test in my <a href='https://ywtechmilitarytest.site/'>website</a> :)</center>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
+## ❏ Preview
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<center><img src='https://images.velog.io/images/abcd8637/post/e4bfc1ab-53e8-4ffe-82b3-89cefb0b9cf7/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-06-21%2021.32.50.png' width='300' height= '600'></center>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+## ❏ Introduce
+1. 자신과 잘 맞는 병과를 재미로 찾아 볼 수 있는 테스트입니다.
+2. 퀴즈 결과를 개인화 시킬 수 있습니다. (`use URL QueryString`)
+3. `dynamic open graph`을 사용하여 각 결과마다 다른 공유 화면을 볼 수 있습니다.

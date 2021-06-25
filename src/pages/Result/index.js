@@ -10,13 +10,7 @@ import getChangeParameterName from "../../utility/getChangeParameterName";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import RESULT from "../../components/ResultSection/result";
 import ReactGA from "react-ga";
-import styled from "styled-components";
-
-const AdvertisedBanner = styled.div`
-    text-align: center;
-    width: 100%;
-    margin: 20px 10px 0px 10px;
-  `;
+import AdvertiseBanner from "../../components/AdvertiseBanner";
 
 const Result = ({ setScore, highScoreObj }) => {
   const { cCode } = useParams();
@@ -37,7 +31,7 @@ const Result = ({ setScore, highScoreObj }) => {
     <>
       <HelmetProvider>
         <Helmet>
-          <title>나와 가장 어울리는 병과는 무엇일까?</title>
+          <title>병과 성향 테스트</title>
           <link rel="icon" href={favicon} />
           <meta property="og:url" content={currentUrl} />
           <meta property="og:title" content={RESULT[cCode]["ogTitle"]} />
@@ -66,24 +60,7 @@ const Result = ({ setScore, highScoreObj }) => {
           테스트 다시하기
         </Button>
 
-        <AdvertisedBanner>
-          <iframe
-            title = 'dynamicBanner1'
-            src="https://ads-partners.coupang.com/widgets.html?id=491881&template=carousel&trackingCode=AF9262326&subId=&width=320&height=100"
-            frameBorder="0"
-            scrolling="no"
-            referrerPolicy="unsafe-url"
-            style={{maxWidth: 90 + '%'}}
-          ></iframe>
-          <iframe
-            title = 'dynamicBanner2'
-            src="https://ads-partners.coupang.com/widgets.html?id=491881&template=carousel&trackingCode=AF9262326&subId=&width=320&height=100"
-            frameBorder="0"
-            scrolling="no"
-            referrerPolicy="unsafe-url"
-            style={{maxWidth: 90 + '%'}}
-          ></iframe>
-        </AdvertisedBanner>
+        <AdvertiseBanner />
       </Container>
     </>
   );
