@@ -30,3 +30,4 @@ Plz try military test in my <a href='https://ywtechmilitarytest.site/'>website</
 4. 테스트 결과 경우의 수는 12가지 입니다.
 5. 카카오톡, 트위터, 페이스북에 공유하기 버튼을 통해 게시물 작성이 가능합니다.
 6. 나와 비슷하거나 반대되는 병과를 확인 할 수 있습니다.
+7. `media-query`를 사용하여 모바일에서도 화면이 깨지지 않습니다.
