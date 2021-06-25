@@ -21,7 +21,7 @@ Plz try military test in my <a href='https://ywtechmilitarytest.site/'>website</
 
 <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/YWTechIT/second_refactory_military_service?style=square">
 
-<img alt="GitHub code size in bytes" src="https://img.shields.io/badge/period-21.5.2. ~ 6.23.-blue?style=square">
+<img alt="period" src="https://img.shields.io/badge/period- 53 days (21.5.2. ~ 6.23).-blue?style=square">
 
 ## ❏ Introduce
 1. 자신과 잘 맞는 병과를 재미로 찾아 볼 수 있는 개인 토이프로젝트입니다.
