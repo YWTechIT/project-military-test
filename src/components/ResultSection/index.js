@@ -14,6 +14,7 @@ const ResultTitle = styled.h1`
 `;
 
 const SectionTitle = styled.h2`
+  color: ${(props) => props.theme.HashTag};
   word-break: keep-all;
 `;
 
@@ -29,7 +30,10 @@ const StyledImage = styled.img`
 `;
 
 const ProgressBarsContainer = styled.div`
+  text-align: -webkit-center;
   width: 100%;
+  display: ${(props) =>
+    Object.values(props.queryId).includes(NaN) && true ? "none" : "block"};
 `;
 
 const ProgressBarsWrapper = styled.div`
@@ -53,10 +57,9 @@ const ResultSection = ({ cCode, queryId }) => {
   return (
     <>
       <ResultTitle>나와 잘 어울리는 병과는?</ResultTitle>
-
       <StyledImage src={RESULT[cCode].src} />
-      <HorizonLine />
-      <ProgressBarsContainer>
+      <ProgressBarsContainer queryId={queryId}>
+        <HorizonLine />
         <SectionTitle># 나의 측정 결과</SectionTitle>
         <ProgressBarsWrapper>
           {Object.entries(queryId).map(([key, value], idx) => (
@@ -68,6 +71,7 @@ const ResultSection = ({ cCode, queryId }) => {
           ))}
         </ProgressBarsWrapper>
       </ProgressBarsContainer>
+
       <HorizonLine />
       <DescriptionWrapper>
         <Description
