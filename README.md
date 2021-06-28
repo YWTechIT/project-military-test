@@ -23,6 +23,10 @@ Plz try military test in my <a href='https://ywtechmilitarytest.site/'>website</
 
 <img alt="period" src="https://img.shields.io/badge/period- 53 days (21.5.2. ~ 6.23).-blue?style=square">
 
+<img alt="all_contribute" src="https://img.shields.io/badge/all_contributer- 1 -blue?style=square"> 
+
+<img alt="last_commit" src="https://img.shields.io/github/last-commit/YWTechIT/second_refactory_military_service/master?style=square">
+
 ## ❏ Introduce
 1. 자신과 잘 맞는 병과를 재미로 찾아 볼 수 있는 개인 토이프로젝트입니다.
 2. 테스트 결과를 고객마다 개인화 시킬 수 있습니다. (`use URL QueryString`)

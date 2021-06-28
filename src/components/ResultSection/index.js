@@ -16,6 +16,7 @@ const ResultTitle = styled.h1`
 const SectionTitle = styled.h2`
   color: ${(props) => props.theme.HashTag};
   word-break: keep-all;
+  color: ${(props) => props.theme.HashTag};
 `;
 
 const StyledImage = styled.img`
@@ -53,11 +54,14 @@ const CardBoxWrapper = styled.div`
   margin: 0px 10px 16px 10px;
 `;
 
-const ResultSection = ({ cCode, queryId }) => {
+const ResultSection = (props) => {
+  const { cCode, queryId } = props;
+  console.log(queryId, Object.values(queryId).includes(NaN));
   return (
     <>
       <ResultTitle>나와 잘 어울리는 병과는?</ResultTitle>
       <StyledImage src={RESULT[cCode].src} />
+
       <ProgressBarsContainer queryId={queryId}>
         <HorizonLine />
         <SectionTitle># 나의 측정 결과</SectionTitle>
@@ -71,6 +75,7 @@ const ResultSection = ({ cCode, queryId }) => {
           ))}
         </ProgressBarsWrapper>
       </ProgressBarsContainer>
+
 
       <HorizonLine />
       <DescriptionWrapper>
