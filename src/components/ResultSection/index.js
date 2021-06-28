@@ -30,6 +30,8 @@ const StyledImage = styled.img`
 
 const ProgressBarsContainer = styled.div`
   width: 100%;
+  display: ${(props) =>
+    Object.values(props.queryId).includes(NaN) && true ? "none" : "block"};
 `;
 
 const ProgressBarsWrapper = styled.div`
@@ -55,8 +57,8 @@ const ResultSection = ({ cCode, queryId }) => {
       <ResultTitle>나와 잘 어울리는 병과는?</ResultTitle>
 
       <StyledImage src={RESULT[cCode].src} />
+      <ProgressBarsContainer queryId = {queryId}>
       <HorizonLine />
-      <ProgressBarsContainer>
         <SectionTitle># 나의 측정 결과</SectionTitle>
         <ProgressBarsWrapper>
           {Object.entries(queryId).map(([key, value], idx) => (
