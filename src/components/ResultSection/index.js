@@ -15,6 +15,7 @@ const ResultTitle = styled.h1`
 
 const SectionTitle = styled.h2`
   word-break: keep-all;
+  color: ${(props) => props.theme.HashTag};
 `;
 
 const StyledImage = styled.img`
@@ -30,6 +31,8 @@ const StyledImage = styled.img`
 
 const ProgressBarsContainer = styled.div`
   width: 100%;
+  display: ${(props) =>
+    Object.values(props.queryId).includes(NaN) && true ? "none" : "block"};
 `;
 
 const ProgressBarsWrapper = styled.div`
@@ -49,25 +52,25 @@ const CardBoxWrapper = styled.div`
   margin: 0px 10px 16px 10px;
 `;
 
-const ResultSection = ({ cCode, queryId }) => {
+const ResultSection = (props) => {
+  const { cCode, queryId } = props;
   return (
     <>
       <ResultTitle>나와 잘 어울리는 병과는?</ResultTitle>
-
       <StyledImage src={RESULT[cCode].src} />
-      <HorizonLine />
-      <ProgressBarsContainer>
-        <SectionTitle># 나의 측정 결과</SectionTitle>
-        <ProgressBarsWrapper>
-          {Object.entries(queryId).map(([key, value], idx) => (
-            <ProgressBar
-              key={idx}
-              name={key}
-              percent={getLimitExceedScore(value)}
-            />
-          ))}
-        </ProgressBarsWrapper>
-      </ProgressBarsContainer>
+        <ProgressBarsContainer queryId = {queryId}>
+        <HorizonLine />
+          <SectionTitle># 나의 측정 결과</SectionTitle>
+          <ProgressBarsWrapper>
+            {Object.entries(queryId).map(([key, value], idx) => (
+              <ProgressBar
+                key={idx}
+                name={key}
+                percent={getLimitExceedScore(value)}
+              />
+            ))}
+          </ProgressBarsWrapper>
+        </ProgressBarsContainer>
       <HorizonLine />
       <DescriptionWrapper>
         <Description
