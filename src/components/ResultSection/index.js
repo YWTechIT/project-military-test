@@ -56,7 +56,6 @@ const CardBoxWrapper = styled.div`
 
 const ResultSection = (props) => {
   const { cCode, queryId } = props;
-  console.log(queryId, Object.values(queryId).includes(NaN));
   return (
     <>
       <ResultTitle>나와 잘 어울리는 병과는?</ResultTitle>
