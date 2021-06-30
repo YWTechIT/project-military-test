@@ -9,13 +9,6 @@ import ReactGA from "react-ga";
 import LandingLowImag from "../../lowImages";
 import BlurredUpImg from "../../components/BlurredUpImg";
 
-const StyledImage = styled.img`
-  border-radius: 10px;
-  margin: 12px;
-  max-width: 70%;
-  display: block;
-`;
-
 const Text = styled.div`
   width: 78%;
   font-size: 15px;

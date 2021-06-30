@@ -16,8 +16,6 @@ const BlurredUpImg = React.memo(({ src, placeholder, alt }) => {
     };
   }, [src]);
 
-  
-
   return (
     <img
       src={currentSrc}
@@ -25,6 +23,8 @@ const BlurredUpImg = React.memo(({ src, placeholder, alt }) => {
         width: "70%",
         opacity: loading ? 0.5 : 1,
         transition: "opacity 1.15s linear",
+        borderRadius: "10px",
+        margin: "12px",
       }}
       alt={alt}
     />
