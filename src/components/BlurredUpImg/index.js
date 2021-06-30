@@ -1,6 +1,19 @@
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 
-const BlurredUpImg = React.memo(({ src, placeholder, alt }) => {
+const StyledImg = styled.img`
+  width: ${(props) => props.isResultPage === undefined ? '70%' : '88%'};
+  border-radius: 16px;
+  opacity: ${(props) => props.loading ? 0.8 : 1};
+  transition: opacity 0.15s linear;
+  margin: ${(props) => props.isResultPage === undefined ? '8px' : '0px 8px 16px 8px'};
+  @media screen and (min-width: 600px) {
+    width: ${(props) => props.isResultPage === undefined ? '' : '96%'};
+  }
+`;
+
+const BlurredUpImg = React.memo(({ src, placeholder, alt, queryId }) => {
+
   const [loading, setLoading] = useState(true);
   const [currentSrc, setCurrentSrc] = useState(placeholder);
 
@@ -17,17 +30,7 @@ const BlurredUpImg = React.memo(({ src, placeholder, alt }) => {
   }, [src]);
 
   return (
-    <img
-      src={currentSrc}
-      style={{
-        width: "70%",
-        opacity: loading ? 0.5 : 1,
-        transition: "opacity 0.15s linear",
-        borderRadius: "10px",
-        margin: "12px",
-      }}
-      alt={alt}
-    />
+    <StyledImg src={currentSrc} loading={loading} alt = {alt} isResultPage = {queryId}></StyledImg>
   );
 });
 
