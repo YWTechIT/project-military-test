@@ -7,7 +7,6 @@ import Container from "../../components/Container";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import ReactGA from "react-ga";
 import BlurredUpImg from "../../components/BlurredUpImg";
-import landingSmall from "../../assets/landingSmall.jpg";
 
 const Text = styled.div`
   width: 78%;
