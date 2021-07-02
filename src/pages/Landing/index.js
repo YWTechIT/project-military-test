@@ -57,7 +57,7 @@ const Landing = () => {
       <Container>
         <h1>병과 성향 테스트</h1>
         <h3>나와 잘 어울리는 병과는 무엇일까?</h3>
-        <BlurredUpImg src={landing} placeholder={landingLow} alt = "landing" />
+        <BlurredUpImg src={landing} placeholder={landingLow} alt = {"landing"} />
         <Text>
           2040년 2월 16일, 병무청 서버 해킹으로 인해 입영기록이 통째로 삭제됐다.
           어느날 병무청에서 이런 문자가 온다면.. 나는 어떤 병과를 선택할까?

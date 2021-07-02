@@ -14,7 +14,7 @@ const StyledImg = styled.img`
 
 const BlurredUpImg = React.memo(({ src, placeholder, alt, queryId }) => {
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(+true);
   const [currentSrc, setCurrentSrc] = useState(placeholder);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const BlurredUpImg = React.memo(({ src, placeholder, alt, queryId }) => {
 
     loadImage.onload = () => {
       // when image is loaded replace the src and set loading to false;
-      setLoading(false);
+      setLoading(+false);
       setCurrentSrc(src);
     };
   }, [src]);
