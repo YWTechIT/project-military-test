@@ -35,3 +35,10 @@ Plz try military test in my <a href='https://ywtechmilitarytest.site/'>website</
 5. `Dynamic open graph`을 사용하여 각 결과마다 다른 공유 화면을 볼 수 있습니다.(경우의 수는 12가지)
 6. 카카오톡, 트위터, 페이스북에 공유하기 버튼을 통해 게시물 작성이 가능합니다.
 7. 나와 비슷하거나 반대되는 병과를 확인 할 수 있습니다.
+
+---
+1. 진행기간: 21. 5. ~ 7. (2개월)
+2. 주요내용: 자신과 잘 맞는 병과를 재미로 찾아 볼 수 있는 개인 토이프로젝트입니다.
+3. 어려웠던 점: `image-blur up`을 구현하는 기능이었는데, `base-64`, `useEffect`에 대해서 자세히 배울 수 있었던 기능이었습니다. <a href='https://github.com/YWTechIT/second_refactory_military_service/pull/8/commits/87d701721534c5f66199d5c7adcc2e57fa28dbc0'>commit 내용</a>
+4. 결과: `React`로 개인프로젝트를 만들었는데 `JS` `type`의 한계를 느꼈습니다. 예를 들어 `utility`의 함수에 들어가는 값이 `string` 인지 `number`인지 타입을 명확하게 구분했으면 좋겠다는 생각이 들었습니다.
+5. 향후계획: `TypeScript`를 공부하여 `TS` 기반의 개인 프로젝트를 만들고 싶습니다.
